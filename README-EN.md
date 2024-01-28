@@ -67,7 +67,7 @@ paginate: 5 # how many articles will show in your website home page.
 
 # configuration related to jekyll
 markdown: kramdown
-repository: knightyun/knightyun.github.io
+repository: kukuqi666/kukuqi666.github.io
 plugins:
   - jekyll-feed
   - jekyll-paginate
