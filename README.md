@@ -5,8 +5,8 @@
     <h1>kukuqi666.github.io</h1>
     <p>基于 jekyll 的响应式 Github Pages 个人博客网站</p>
 
-[![license](https://img.shields.io/github/license/knightyun/knightyun.github.io)](https://github.com/knightyun/knightyun.github.io/blob/master/COPYING)
-[![Gitter](https://img.shields.io/gitter/room/knightyun/knightyun.github.i0)](https://gitter.im/knightyun-github-io/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![license](https://img.shields.io/github/license/kukuqi666/kukuqi666.github.io)](https://github.com/kukuqi666/kukuqi666.github.io/blob/main/COPYING)
+[![Gitter](https://img.shields.io/gitter/room/kukuqi666/kukuqi666.github.i0)](https://gitter.im/kukuqi666-github-io/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Website](https://img.shields.io/website?down_color=lightgrey%09&down_message=offline&up_color=%09aqua&up_message=online&url=https%3A%2F%2Fkukuqi666.github.io)](https://kukuqi666.github.io)
 [![GitHub deployments](https://img.shields.io/github/deployments/kukuqi666/kukuqi666.github.io/github-pages)](https://github.com/kukuqi666/kukuqi666.github.io/deployments)
 ![GitHub top language](https://img.shields.io/github/languages/top/kukuqi666/kukuqi666.github.io)
