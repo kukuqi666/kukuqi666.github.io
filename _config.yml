@@ -21,7 +21,7 @@ user: "酷酷琪" # 用于侧栏展示的名字
 user_email: "2506230866@qq.com" # 侧栏展示的联系方式
 paginate: 5 # 主页展示的博客文章数量
 nick_name: "酷酷琪" # 昵称
-english_name: "kukuqi"
+english_name: "SEW Wang"
 # valine 评论插件配置
 valine:
   leancloud_appid: "4XY3DoTJmibNe3rHeAKOxqzl-gzGzoHsz"
