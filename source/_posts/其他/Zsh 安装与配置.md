@@ -2,6 +2,7 @@
 title: Zsh 安装与配置，使用 Oh-My-Zsh 美化终端
 layout: post
 categories: Exploit
+cover: true
 tags: exploit 终端 oh-my-zsh
 excerpt: Oh My Zsh 是基于 zsh 命令行的一个扩展工具集，提供了丰富的扩展功能。
 ---
