@@ -2,6 +2,7 @@
 title: OpenClash
 layout: post
 categories: Exploit 
+cover: true
 tags: exploit openwrt Clash 科学上网
 excerpt: OpenClash 安装和简单使用教程及常见错误解决
 ---
