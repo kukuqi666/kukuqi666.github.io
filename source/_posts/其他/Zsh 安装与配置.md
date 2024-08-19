@@ -20,7 +20,7 @@ Zsh 安装与配置，使用 Oh-My-Zsh 美化终端
 
 ### 1.1 安装基本工具
 
-```
+```sh
 # 更新软件源
 sudo apt update && sudo apt upgrade -y
 # 安装 zsh git curl
@@ -29,7 +29,7 @@ sudo apt install zsh git curl -y
 
 设置默认终端为 zsh（**注意：不要使用 sudo**）。
 
-```
+```sh
 chsh -s /bin/zsh
 ```
 
@@ -54,13 +54,13 @@ chsh -s /bin/zsh
 ----------------------------------------------------------
 
 ### 2.1 自定义主题
-```
+```sh
 sudo wget -O $ZSH_CUSTOM/themes/haoomz.zsh-theme https://cdn.haoyep.com/gh/leegical/Blog_img/zsh/haoomz.zsh-theme
 ```
 
 编辑 `~/.zshrc` 文件，将 `ZSH_THEME` 设为 `haoomz`。当然你也可以设置为其他主题，例如`lukerandall`、`robbyrussell`。
 
-```
+```sh
 nano ~/.zshrc
 
 ZSH_THEME="haoomz"
@@ -80,7 +80,7 @@ source ~/.zshrc
 
 你可以在[内置主题样式截图](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)中查看所有 zsh 内置的主题样式和对应的主题名。这些内置主题已经放在 ～/.oh-my-zsh/themes 目录下，不需要再下载。
 
-```
+```sh
 cd ~/.oh-my-zsh/themes && ls
 ```
 
@@ -90,7 +90,7 @@ cd ~/.oh-my-zsh/themes && ls
 #### 2.2.1 powerlevel10k
 
 根据 [What’s the best theme for Oh My Zsh?](https://www.slant.co/topics/7553/~theme-for-oh-my-zsh) 中的排名，以及自定义化、美观程度，强烈建议使用 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 主题。
-```
+```sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # 中国用户可以使用 gitee.com 上的官方镜像加速下载
@@ -114,7 +114,7 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$H
 
 
 安装方式：把插件下载到本地的 `~/.oh-my-zsh/custom/plugins` 目录。
-```
+```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
@@ -126,7 +126,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 
 安装方式：把插件下载到本地的 `~/.oh-my-zsh/custom/plugins` 目录。
-```
+```sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
@@ -154,7 +154,7 @@ oh-my-zsh 内置了 `web-search` 插件。`web-search` 能让我们在命令行�
 
 ### 3.2 启用插件
 修改`~/.zshrc`中插件列表为：
-```
+```sh
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract web-search)
 ```
 
@@ -171,7 +171,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract web-search)
 ### 4.1 root 用户
 
 当你配置好登陆用户的 zsh 后，如果使用`sudo su`命令进入`root`用户的终端，发现还是默认的`bash`。建议在`root`用户的终端下，也安装`on my zsh`，设置与普通用户不同的主题以便区分，插件可以使用一样的。 `root`用户的`~/.zshrc`配置，仅供参考：
-```
+```sh
 ZSH_THEME="ys"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract web-search)
 # 或
@@ -181,7 +181,7 @@ plugins=(git colored-man-pages colorize cp man command-not-found sudo suse ubunt
 ### 4.2 配置本地代理
 
 如果你配置了本地代理，并希望终端的 git 等命令使用代理，那么可以在`~/.zshrc`中添加：
-```
+```sh
 # 为 curl wget git 等设置代理
 proxy () {
   export ALL_PROXY="socks5://127.0.0.1:1089"
@@ -203,7 +203,7 @@ unproxy () {
 以后在使用 `git` 等命令之前，只需要在终端中输入 `proxy` 命令，即可使用本地代理。
 
 #### 4.2.1 WSL 配置本地代理
-```
+```sh
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
 # 为 curl wget git npm apt 等设置代理
 proxy () {
@@ -227,13 +227,13 @@ unproxy () {
 ### 4.3 卸载 Oh My Zsh
 
 *   终端输入 ：
-```
+```sh
 uninstall_oh_my_zsh
 Are you sure you want to remove Oh My Zsh? [y/N] Y
 ```
 
 *   终端提示信息：
-```
+```sh
 Removing ~/.oh-my-zsh
 Looking for original zsh config...
 Found ~/.zshrc.pre-oh-my-zsh -- Restoring to ~/.zshrc
@@ -245,6 +245,6 @@ Thanks for trying out Oh My Zsh. It's been uninstalled.
 ### 4.4 手动更新 Oh My Zsh
 *   **Oh My Zsh** 的自动更新提示误触关掉了解决办法
 *   打开终端输入：
-```
+```sh
 upgrade_oh_my_zsh
 ```
