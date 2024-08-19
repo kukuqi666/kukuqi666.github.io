@@ -13,7 +13,7 @@ Kali Linux 是一个基于 Debian 的高级渗透测试和安全审计 Linux 发
 
 ### 首先，您需要打开 Kali Linux 的软件源列表文件 `sources.list`：
 
-```
+```sh
 vim /etc/apt/sources.list
 ```
 
@@ -23,7 +23,7 @@ vim /etc/apt/sources.list
 
 ##  3.更新软件源
 
-```
+```sh
 sudo apt update
 ```
 
@@ -33,19 +33,19 @@ sudo apt update
 
 ### 解决方法删除以下目录
 
-```
+```sh
 rm -rf /etc/apt/sources.list.d
 ```
 
 ### 下载数字签名
 
-```
+```sh
 wget -O archive-key.asc https://archive.kali.org/archive-key.asc
 ```
 
 ### 安装数字签名
 
-```
+```sh
 sudo apt-key add archive-key.asc
 ```
 
@@ -56,37 +56,37 @@ sudo apt-key add archive-key.asc
 ##  附镜像源地址
 
 中科大
-```
+```sh
 deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 ```
 
 阿里云
-```
+```sh
 deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
 deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
 ```
 
 清华大学
-```
+```sh
 deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
 deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
 ```
 
 浙大
-```
+```sh
 deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
 deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
 ```
 
 东软大学
-```
+```sh
 deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
 deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
 ```
 
 官方源
-```
+```sh
 deb http://http.kali.org/kali kali-rolling main non-free contrib
 deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 ```
