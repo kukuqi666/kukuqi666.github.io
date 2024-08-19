@@ -2,6 +2,7 @@
 title: "Kali Linux 换国内镜像源"
 layout: post
 categories: Exploit
+cover: true
 tags: Kali-Linux Linux 国内镜像源 mirrors
 excerpt: kali linux换国内镜像源和报错处理方法
 ---
