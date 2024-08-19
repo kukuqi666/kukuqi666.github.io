@@ -129,12 +129,11 @@ indexbtn:
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
   github:  https://github.com/kukuqi666
-  email: kukuqi666@gmail.com
-  qq: 2506230866
-  facebook: https://www.facebook.com/profile.php?id=100083476812104
-  twitter: https://x.com/kernel521
-  telegram: https://t.me/kukuqi666
-  bilibili: https://space.bilibili.com/457053522
+  email:  kukuqi666@gmail.com
+  qq:  2506230866
+  facebook:   https://www.facebook.com/profile.php?id=100083476812104
+  twitter:   https://x.com/kernel521
+  telegram:   https://t.me/kukuqi666
   rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
