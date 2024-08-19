@@ -10,7 +10,7 @@ excerpt: kali手工开启ssh(端口22）命令操作方法
 
 ##  插入一个kali添加新root的命令
 
-```
+```sh
 sudo passwd root
 ```
 
@@ -28,7 +28,7 @@ sudo passwd root
 
 修改sshd_config文件，命令为：
 
-```
+```sh
 vim /etc/ssh/sshd_config
 ```
 
@@ -45,12 +45,12 @@ vim /etc/ssh/sshd_config
 ##  第二步：启动SSH服务
 
 命令为：
-```
+```sh
 /etc/init.d/ssh start
 ```
 
 或者
-```
+```sh
 service ssh start
 ```
 
@@ -59,11 +59,11 @@ service ssh start
 
 
 查看SSH服务状态是否正常运行，命令为：
-```
+```sh
 /etc/init.d/ssh status
 ```
 或者
-```
+```sh
 service ssh status
 ```
  
@@ -74,7 +74,7 @@ service ssh status
 
 ### 系统自动启动SSH服务
 
-```
+```sh
 update-rc.d ssh enable 
 ```
 
@@ -83,7 +83,7 @@ update-rc.d ssh enable
  
 ### 关闭系统自动启动SSH服务
 
-``` 
+``` sh
 update-rc.d ssh disabled
 ```
 
