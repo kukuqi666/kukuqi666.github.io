@@ -41,7 +41,7 @@ excerpt: OpenClash 安装和简单使用教程及常见错误解决
 
 通过终端行进入
 
-```
+```sh
 ssh [[email protected]](https://adao.me/cdn-cgi/l/email-protection)
 ```
 
@@ -51,14 +51,14 @@ ssh [[email protected]](https://adao.me/cdn-cgi/l/email-protection)
 
 1.  更新
 
-```
+```sh
 opkg update
 ```
 
 如更新错误，请检查系统-软件包-配置内地址是否可用  
 小娱路由器软件源（MT7621）
 
-```
+```sh
 src/gz openwrt_core https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/
 src/gz openwrt_base https://downloads.openwrt.org/snapshots/packages/mipsel_24kc/base/
 src/gz openwrt_luci https://downloads.openwrt.org/snapshots/packages/mipsel_24kc/luci/
@@ -75,7 +75,7 @@ coreutils-nohup, bash, iptables, dnsmasq-full, curl, ca-certificates, ipset, ip-
 无法安装 kmod-tun（显示内核版本不匹配）  
 强制安装
 
-```
+```sh
 opkg install kmod-tun --force-depends 
 ```
 
@@ -83,7 +83,7 @@ opkg install kmod-tun --force-depends
 
 报错：opkg\_conf\_load: Could not lock /var/lock/opkg.lock: Resource temporarily unavailable.
 
-```
+```sh
 rm -f /var/lock/opkg.lock
 ```
 
@@ -94,13 +94,13 @@ rm -f /var/lock/opkg.lock
 
 1.  进入tmp目录
 
-```
+```sh
 cd /tmp/tmp/
 ```
 
 1.  下载及安装ipk（v0.44.03-beta）
 
-```
+```sh
 wget https://github.com/vernesong/OpenClash/releases/download/v0.44.03-beta/luci-app-openclash_0.44.03-beta_all.ipk
 opkg install luci-app-openclash_0.44.03-beta_all.ipk
 ```
@@ -114,7 +114,7 @@ opkg install luci-app-openclash_0.44.03-beta_all.ipk
 
 *   clash内核
 
-```
+```sh
 cd /etc/openclash/core/
 wget https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-mipsle-softfloat.tar.gz
 tar -zxvf clash-linux-mipsle-softfloat.tar.gz
