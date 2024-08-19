@@ -1,14 +1,13 @@
 ---
 title: Hexo博客主题之hexo-theme-matery的介绍
-date: 2018-09-28 13:34:00
-author: blinkfox
+date: 2024-08-19 13:34:00
+author: kukuqi666
 cover: true
 categories: 前端
 tags:
   - Hexo
   - hexo-theme-matery
 ---
-[English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ交流群:`926552981`
 
 > 这是一个采用`Material Design`和响应式设计的 Hexo 博客主题。
 
