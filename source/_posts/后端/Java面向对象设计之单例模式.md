@@ -1,8 +1,7 @@
 ---
 title: Java面向对象设计之单例模式
-date: 2018-10-29 23:30:00
-author: blinkfox
-categories: 软件设计
+author: kukuqi666
+categories: 后端
 tags:
   - Java
   - 设计模式

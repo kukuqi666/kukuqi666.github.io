@@ -1,8 +1,8 @@
 ---
 title: JavaScript之再学习
 date: 2018-10-30 00:30:00
-author: blinkfox
-categories: 前端
+author: kukuqi666
+categories: JavaScript
 tags:
   - JavaScript
 ---

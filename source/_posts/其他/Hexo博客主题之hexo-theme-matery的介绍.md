@@ -3,7 +3,7 @@ title: Hexo博客主题之hexo-theme-matery的介绍
 date: 2024-08-19 13:34:00
 author: kukuqi666
 cover: true
-categories: 前端
+categories: Exploit
 tags:
   - Hexo
   - hexo-theme-matery
