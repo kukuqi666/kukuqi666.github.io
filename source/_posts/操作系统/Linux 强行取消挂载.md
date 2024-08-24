@@ -1,7 +1,7 @@
 ---
 title:  Linux 强行取消挂载
 layout: post
-categories: Linux
+categories: 操作系统
 tags: linux挂载
 excerpt: linux 中遇到目录无法强行取消挂载情况的解决方法
 ---

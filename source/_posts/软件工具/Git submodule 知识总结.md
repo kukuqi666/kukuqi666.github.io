@@ -1,7 +1,7 @@
 ---
 title: Git submodule 知识总结
 layout: post
-categories: Git
+categories: 软件工具
 tags: git submodule 子模块
 excerpt: 总结 Git 子模块（submodule）的相关概念及用法
 ---

@@ -1,7 +1,7 @@
 ---
 title: 记一次Windows电脑开机登录后黑屏的问题分析与排查
 layout: post
-categories: 系统
+categories: 操作系统
 excerpt: 记录一次Windows笔记本开机登录后黑屏的问题分析与解决的心路过程
 tags: windows 登录 黑屏 事件查看 日志
 ---

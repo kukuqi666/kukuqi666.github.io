@@ -1,7 +1,7 @@
 ---
 title: 提升 Linux 终端命令敲写效率的快捷键参考
 layout: post
-categories: Linux
+categories: 操作系统
 tags: linux shell 终端 快捷键
 excerpt: 分类介绍 Linux 终端中一些常用操作的快捷键
 ---

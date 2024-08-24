@@ -1,7 +1,7 @@
 ---
 title: 提升开发效率的 Chrome 开发者工具快捷键参考
 layout: post
-categories: 工具
+categories: 软件工具
 tags: chrome devtool 开发者工具 快捷键
 excerpt: 介绍与总结 Chrome 浏览器开发者工具(devtool)中的常用快捷键
 ---

@@ -1,7 +1,7 @@
 ---
 title: Kali Linux 自定义分辨率
 layout: post
-categories: Exploit
+categories: 操作系统
 tags: Linux分辨率 cvt xrandr
 excerpt: Linux 系统中自定义分辨率的方法
 ---

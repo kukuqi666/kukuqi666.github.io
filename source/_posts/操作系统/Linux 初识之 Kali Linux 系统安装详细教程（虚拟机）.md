@@ -1,7 +1,7 @@
 ---
 title: Linux 初识之 Kali Linux 系统安装详细教程（虚拟机）
 layout: post
-categories: Exploit
+categories: 操作系统
 tags: kali系统安装 linux 虚拟机安装 VMware
 excerpt: Kali Linux系统在虚拟机上的详细图文安装教程
 ---

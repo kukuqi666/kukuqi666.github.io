@@ -1,7 +1,7 @@
 ---
 title: Git 仓库中文件名大小写问题
 layout: post
-categories: Git
+categories: 软件工具
 tags: git 大小写 ignorecase
 excerpt: 关于 git 中的文件名大小写识别问题与解决方法
 ---

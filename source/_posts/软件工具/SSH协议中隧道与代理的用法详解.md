@@ -1,7 +1,7 @@
 ---
 title: SSH协议中隧道与代理的用法详解
 layout: post
-categories: 工具
+categories: 软件工具
 tags: ssh socks 代理 多级代理 隧道
 excerpt: 关于ssh协议中的隧道连接与代理的相关用法详解
 ---

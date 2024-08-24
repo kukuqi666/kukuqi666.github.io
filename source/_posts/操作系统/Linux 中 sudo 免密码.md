@@ -1,7 +1,7 @@
 ---
 title: Linux 中 sudo 免密码
 layout: post
-categories: Linux
+categories: 操作系统
 tags: sudoers sudo
 excerpt: Linux 中执行 sudo 不用输入密码的方法
 ---
