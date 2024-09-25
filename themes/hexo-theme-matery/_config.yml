@@ -130,7 +130,7 @@ indexbtn:
 socialLink:
   github:  https://github.com/kukuqi666
   email:  kukuqi666@gmail.com
-  qq:  2506230866
+  qid:  wnfng66
   facebook:   https://www.facebook.com/profile.php?id=100083476812104
   twitter:   https://x.com/wnfng521
   telegram:   https://t.me/kukuqi666
@@ -165,7 +165,7 @@ reward:
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
   enable: true
-  minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
+  minCharNumber: 1200 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
 # Whether to activate the mathjax, this is a global configuration, but the post still does not open the mathjax rendering.
