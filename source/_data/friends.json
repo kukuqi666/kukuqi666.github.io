@@ -38,7 +38,7 @@
 	"avatar": "https://gitee.com/kukuqi666/images/raw/master/7.jpg",
 	"name": "网安知识库",
 	"introduction": "致力于打造信息安全乌托邦 ",
-	"url": "https://kukuqi666.github.io/sitemap/",
+	"url": "https://kukuqi666.github.io/wgpsec/",
 	"title": "开启网络安全之路"
 },{
 	"avatar": "https://gitee.com/kukuqi666/images/raw/master/8.jpg",
@@ -46,10 +46,4 @@
 	"introduction": "漏洞POC和EXP披露以及漏洞复现的开源项目",
 	"url": "https://kukuqi666.github.io/mkdocs/",
 	"title": "开启学习之旅"
-},{
-	"avatar": "https://gitee.com/kukuqi666/images/raw/master/9.jpg",
-	"name": "html转md",
-	"introduction": "开源的一款轻量级功能强大的html转md工具",
-	"url": "https://kukuqi666.github.io/html2md/",
-	"title": "开启告白之旅"
 }]
