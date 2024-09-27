@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>如梦初醒</title>
+  
+  <subtitle>如梦初醒的博客</subtitle>
+  <link href="https://kukuqi666.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://kukuqi666.github.io/"/>
+  <updated>2024-09-27T08:08:59.115Z</updated>
+  <id>https://kukuqi666.github.io/</id>
+  
+  <author>
+    <name>kukuqi666</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>递归函数之阶乘的实现</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/di-gui-han-shu-zhi-jie-cheng-de-shi-xian/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/di-gui-han-shu-zhi-jie-cheng-de-shi-xian/</id>
+    <published>2024-09-27T08:08:59.115Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">用递归函数实现阶乘函数算法</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="递归函数 阶乘" scheme="https://kukuqi666.github.io/tags/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0-%E9%98%B6%E4%B9%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git submodule 知识总结</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/git-submodule-zhi-shi-zong-jie/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/git-submodule-zhi-shi-zong-jie/</id>
+    <published>2024-09-27T08:08:59.115Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">总结 Git 子模块（submodule）的相关概念及用法</summary>
+    
+    
+    
+    <category term="软件工具" scheme="https://kukuqi666.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="git submodule 子模块" scheme="https://kukuqi666.github.io/tags/git-submodule-%E5%AD%90%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 仓库中文件名大小写问题</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/git-cang-ku-zhong-wen-jian-ming-da-xiao-xie-wen-ti/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/git-cang-ku-zhong-wen-jian-ming-da-xiao-xie-wen-ti/</id>
+    <published>2024-09-27T08:08:59.115Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">关于 git 中的文件名大小写识别问题与解决方法</summary>
+    
+    
+    
+    <category term="软件工具" scheme="https://kukuqi666.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="git 大小写 ignorecase" scheme="https://kukuqi666.github.io/tags/git-%E5%A4%A7%E5%B0%8F%E5%86%99-ignorecase/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSH协议中隧道与代理的用法详解</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/ssh-xie-yi-zhong-sui-dao-yu-dai-li-de-yong-fa-xiang-jie/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/ssh-xie-yi-zhong-sui-dao-yu-dai-li-de-yong-fa-xiang-jie/</id>
+    <published>2024-09-27T08:08:59.115Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">关于ssh协议中的隧道连接与代理的相关用法详解</summary>
+    
+    
+    
+    <category term="软件工具" scheme="https://kukuqi666.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="ssh socks 代理 多级代理 隧道" scheme="https://kukuqi666.github.io/tags/ssh-socks-%E4%BB%A3%E7%90%86-%E5%A4%9A%E7%BA%A7%E4%BB%A3%E7%90%86-%E9%9A%A7%E9%81%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提升开发效率的 Chrome 开发者工具快捷键参考</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/ti-sheng-kai-fa-xiao-lu-de-chrome-kai-fa-zhe-gong-ju-kuai-jie-jian-can-kao/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/ruan-jian-gong-ju/ti-sheng-kai-fa-xiao-lu-de-chrome-kai-fa-zhe-gong-ju-kuai-jie-jian-can-kao/</id>
+    <published>2024-09-27T08:08:59.115Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">介绍与总结 Chrome 浏览器开发者工具(devtool)中的常用快捷键</summary>
+    
+    
+    
+    <category term="软件工具" scheme="https://kukuqi666.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="chrome devtool 开发者工具 快捷键" scheme="https://kukuqi666.github.io/tags/chrome-devtool-%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提升 Linux 终端命令敲写效率的快捷键参考</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ti-sheng-linux-zhong-duan-ming-ling-qiao-xie-xiao-lu-de-kuai-jie-jian-can-kao/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ti-sheng-linux-zhong-duan-ming-ling-qiao-xie-xiao-lu-de-kuai-jie-jian-can-kao/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">分类介绍 Linux 终端中一些常用操作的快捷键</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="linux shell 终端 快捷键" scheme="https://kukuqi666.github.io/tags/linux-shell-%E7%BB%88%E7%AB%AF-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电脑固态硬盘接口辨析</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/dian-nao-gu-tai-ying-pan-jie-kou-bian-xi/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/dian-nao-gu-tai-ying-pan-jie-kou-bian-xi/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">介绍电脑不同接口的固态硬盘的区别</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="固态硬盘 SSD SATA M.2" scheme="https://kukuqi666.github.io/tags/%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98-SSD-SATA-M-2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Base64 码简介</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/base64-ma-jian-jie/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/base64-ma-jian-jie/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">Base64 码的介绍与使用</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="base64" scheme="https://kukuqi666.github.io/tags/base64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一次Windows电脑开机登录后黑屏的问题分析与排查</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ji-yi-ci-windows-dian-nao-kai-ji-deng-lu-hou-hei-ping-de-wen-ti-fen-xi-yu-pai-cha/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ji-yi-ci-windows-dian-nao-kai-ji-deng-lu-hou-hei-ping-de-wen-ti-fen-xi-yu-pai-cha/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">记录一次Windows笔记本开机登录后黑屏的问题分析与解决的心路过程</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="windows 登录 黑屏 事件查看 日志" scheme="https://kukuqi666.github.io/tags/windows-%E7%99%BB%E5%BD%95-%E9%BB%91%E5%B1%8F-%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B-%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 完整语法说明</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/markdown-wan-zheng-yu-fa-shuo-ming/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/markdown-wan-zheng-yu-fa-shuo-ming/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">完整版markdown语法</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="markdown" scheme="https://kukuqi666.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 简明教程</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/markdown-jian-ming-jiao-cheng/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/markdown-jian-ming-jiao-cheng/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">简要 markdown 语法</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="markdown" scheme="https://kukuqi666.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UTF-8, ASCII, Unicode 的介绍与区分</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/utf-8-ascii-unicode-de-jie-shao-yu-qu-fen/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/utf-8-ascii-unicode-de-jie-shao-yu-qu-fen/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">关于 UTF-8，ASCII，Unicode 的介绍与区分</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="utf-8 ascii unicode" scheme="https://kukuqi666.github.io/tags/utf-8-ascii-unicode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>位运算符与位运算</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/wei-yun-suan-fu-yu-wei-yun-suan/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/wei-yun-suan-fu-yu-wei-yun-suan/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">编程中位运算的介绍与应用</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="位运算 按位运算" scheme="https://kukuqi666.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E6%8C%89%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于浮点数的剪不断理还乱</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/guan-yu-fu-dian-shu-de-jian-bu-duan-li-huan-luan/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/guan-yu-fu-dian-shu-de-jian-bu-duan-li-huan-luan/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">展开介绍关于浮点的表示与转换原理</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="浮点 定点 二进制小数 规约 阶码" scheme="https://kukuqi666.github.io/tags/%E6%B5%AE%E7%82%B9-%E5%AE%9A%E7%82%B9-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0-%E8%A7%84%E7%BA%A6-%E9%98%B6%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十进制负数的二进制表示法</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/shi-jin-zhi-fu-shu-de-er-jin-zhi-biao-shi-fa/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/shi-jin-zhi-fu-shu-de-er-jin-zhi-biao-shi-fa/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.114Z</updated>
+    
+    
+    <summary type="html">十进制负数转换为二进制</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="负数二进制" scheme="https://kukuqi666.github.io/tags/%E8%B4%9F%E6%95%B0%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编程范式之命令式与函数式</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/bian-cheng/bian-cheng-fan-shi-zhi-ming-ling-shi-yu-han-shu-shi/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/bian-cheng/bian-cheng-fan-shi-zhi-ming-ling-shi-yu-han-shu-shi/</id>
+    <published>2024-09-27T08:08:59.114Z</published>
+    <updated>2024-09-27T08:08:59.115Z</updated>
+    
+    
+    <summary type="html">编程中的范式的介绍与区分</summary>
+    
+    
+    
+    <category term="编程" scheme="https://kukuqi666.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程范式 函数式编程 命令式编程" scheme="https://kukuqi666.github.io/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B-%E5%91%BD%E4%BB%A4%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面向对象设计之单例模式</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/hou-duan/java-mian-xiang-dui-xiang-she-ji-zhi-dan-li-mo-shi/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/hou-duan/java-mian-xiang-dui-xiang-she-ji-zhi-dan-li-mo-shi/</id>
+    <published>2024-09-27T08:08:59.113Z</published>
+    <updated>2024-09-27T08:08:59.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;模式动机&quot;&gt;&lt;a href=&quot;#模式动机&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://kukuqi666.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://kukuqi666.github.io/tags/Java/"/>
+    
+    <category term="设计模式" scheme="https://kukuqi666.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kali Linux 之软件安装、卸载、更新和修改更新源</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/kali-linux-zhi-ruan-jian-an-zhuang-xie-zai-geng-xin-he-xiu-gai-geng-xin-yuan/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/kali-linux-zhi-ruan-jian-an-zhuang-xie-zai-geng-xin-he-xiu-gai-geng-xin-yuan/</id>
+    <published>2024-09-27T08:08:59.113Z</published>
+    <updated>2024-09-27T08:08:59.113Z</updated>
+    
+    
+    <summary type="html">Linux 系统软件安装、卸载、更新与修改更新源</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Linux安装软件 Linux更新源" scheme="https://kukuqi666.github.io/tags/Linux%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6-Linux%E6%9B%B4%E6%96%B0%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kali Linux 自定义分辨率</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/kali-linux-zi-ding-yi-fen-bian-lu/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/kali-linux-zi-ding-yi-fen-bian-lu/</id>
+    <published>2024-09-27T08:08:59.113Z</published>
+    <updated>2024-09-27T08:08:59.113Z</updated>
+    
+    
+    <summary type="html">Linux 系统中自定义分辨率的方法</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Linux分辨率 cvt xrandr" scheme="https://kukuqi666.github.io/tags/Linux%E5%88%86%E8%BE%A8%E7%8E%87-cvt-xrandr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 中 apt install 的 lock 问题</title>
+    <link href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/linux-zhong-apt-install-de-lock-wen-ti/"/>
+    <id>https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/linux-zhong-apt-install-de-lock-wen-ti/</id>
+    <published>2024-09-27T08:08:59.113Z</published>
+    <updated>2024-09-27T08:08:59.113Z</updated>
+    
+    
+    <summary type="html">apt install 过程遇到 lock 问题的解决方法</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://kukuqi666.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="apt-install-lock" scheme="https://kukuqi666.github.io/tags/apt-install-lock/"/>
+    
+  </entry>
+  
+</feed>

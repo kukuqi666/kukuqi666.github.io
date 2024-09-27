@@ -1,0 +1,1544 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CSS3 之 2D 与 3D 变换, 如梦初醒, kukuqi666">
+    <meta name="description" content="从来没有真正的绝境，只有心灵的迷途">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CSS3 之 2D 与 3D 变换 | 如梦初醒</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="如梦初醒" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">如梦初醒</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">如梦初醒</div>
+        <div class="logo-desc">
+            
+            从来没有真正的绝境，只有心灵的迷途
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/kukuqi666/kukuqi666.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Home page
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/kukuqi666/kukuqi666.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Home page" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CSS3 之 2D 与 3D 变换</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/css2d-css3d-transform/">
+                                <span class="chip bg-color">css2d css3d transform</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CSS/" class="post-category">
+                                CSS
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-09-27
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        <!-- 代码块折行 -->
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><hr>
+<ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%9D%90%E6%A0%87%E8%BD%B4">关于坐标轴</a></li>
+<li><a href="#2d%E5%8F%98%E6%8D%A2">2D变换</a><ul>
+<li><a href="#translatexy">translate(x,y)</a></li>
+<li><a href="#rotatedeg">rotate(deg)</a></li>
+<li><a href="#scalexy">scale(x,y)</a></li>
+<li><a href="#skewxdegydeg">skew(xdeg,ydeg)</a></li>
+<li><a href="#matrixabcde">matrix(a,b,c,d,e)</a></li>
+</ul>
+</li>
+<li><a href="#3d%E5%8F%98%E6%8D%A2">3D变换</a><ul>
+<li><a href="#translate3dxyz">translate3d(x,y,z)</a></li>
+<li><a href="#rotate3dxyzdeg">rotate3d(x,y,z,deg)</a></li>
+<li><a href="#scale3dxyz">scale3d(x,y,z)</a></li>
+<li><a href="#matrix3d">matrix3d()</a></li>
+<li><a href="#perspective">perspective</a></li>
+<li><a href="#perspective-origin">perspective-origin</a></li>
+<li><a href="#backface-visibility">backface-visibility</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7">其他属性</a><ul>
+<li><a href="#transform-origin">transform-origin</a></li>
+<li><a href="#transform-style">transform-style</a></li>
+<li><a href="#css-3d">CSS 3D</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>css3实现了对元素执行2D平面变换，以及视觉上的3D空间变换，2D变换平时可能用的较多，3D效果也能锦上添花；</p>
+<h1 id="关于坐标轴"><a href="#关于坐标轴" class="headerlink" title="关于坐标轴"></a>关于坐标轴</h1><p>初中数学的几何学里我们便开始接触坐标轴，最基本的是平面直角坐标系<code>XoY</code>，然后延伸出空间直角坐标系<code>XYZ</code>，现在我们来说一下css中的坐标系；</p>
+<p>css甚至一下设备相关的开发中，基本都遵循这样一套坐标系：以手机屏幕为例，坐标系<strong>圆点</strong>位于屏幕最左上角；<strong>x轴</strong>水平，向右为正方向；<strong>y轴</strong>垂直，向下为正方向；<strong>z轴</strong>垂直于整个屏幕平面，向外为正方向，就是屏幕光线射向你眼睛的方向；</p>
+<p>如图：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c05d7bfbf0.png" alt="image"></p>
+<h1 id="2D变换"><a href="#2D变换" class="headerlink" title="2D变换"></a>2D变换</h1><p>包括平移<code>translate()</code>，旋转<code>rotate()</code>，缩放<code>scale()</code>，倾斜<code>skew()</code>，矩阵<code>matrix()</code>；</p>
+<h2 id="translate-x-y"><a href="#translate-x-y" class="headerlink" title="translate(x,y)"></a>translate(x,y)</h2><p>平移操作，包括<code>translateX(x)</code>, <code>translateY(y)</code>，括号内填平移参数值，可以是负值，即反方向；</p>
+<p>例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/*元素向右平移50px，向下移60px*/</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>50px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>60px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/*简写形式，效果相同*/</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>50px<span class="token punctuation">,</span> 60px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意</strong><code>translate()</code>只指定一个值则默认是<strong>x轴</strong>位移，即水平移动；</p>
+<h2 id="rotate-deg"><a href="#rotate-deg" class="headerlink" title="rotate(deg)"></a>rotate(deg)</h2><p>元素旋转，括号中参数为旋转角度，<strong>顺时针</strong>为正值，<strong>逆时针</strong>为负值，单位为<code>deg</code>，即多少度；</p>
+<p>例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 顺时针旋转30° */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2019/01/26/5c4c1133253ba.png" alt="rotate"></p>
+<h2 id="scale-x-y"><a href="#scale-x-y" class="headerlink" title="scale(x,y)"></a>scale(x,y)</h2><p>缩放元素，参数分别为x轴，y轴缩放倍数，包括<code>scaleX(x)</code>和<code>scaleY(y)</code>，提供一个参数表示<strong>按比例</strong>缩放；</p>
+<p>例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 横向缩小一半，纵向放大一倍 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>.5<span class="token punctuation">,</span> 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2019/01/26/5c4c11e1729ad.png" alt="scale1"></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 按比例放大3倍 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2019/01/26/5c4c11e1b4e89.png" alt="scale2"></p>
+<h2 id="skew-xdeg-ydeg"><a href="#skew-xdeg-ydeg" class="headerlink" title="skew(xdeg,ydeg)"></a>skew(xdeg,ydeg)</h2><p>包含<code>skewX(deg)</code>, <code>skewY(deg)</code>，表示在水平和垂直方向倾斜的角度；</p>
+<p>例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skewX</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skewY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 简写 */</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skew</span><span class="token punctuation">(</span>30deg<span class="token punctuation">,</span> 45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要<strong>注意</strong>，如果元素为一个矩形，那么<code>skewX(30deg)</code>表示矩形<strong>顶边固定</strong>，底边<strong>向右</strong>倾斜<code>30deg</code>；<code>skewY(30deg)</code>表示矩形<strong>左边框固定</strong>，右边框<strong>向下</strong>倾斜<code>30deg</code>；</p>
+<p>可以根据上面讲的屏幕坐标系来记忆，x轴位于屏幕顶部，方向向右；y轴位于屏幕左部，方向向下；</p>
+<p>如果<code>skew()</code>只指定一个值，默认是<strong>水平倾斜</strong>；</p>
+<p><strong>skewX(30deg)</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c0fc60c6bd.png" alt="skewX"></p>
+<p><strong>skewY(30deg)</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c10c4b187a.png" alt="skewY"></p>
+<h2 id="matrix-a-b-c-d-e"><a href="#matrix-a-b-c-d-e" class="headerlink" title="matrix(a,b,c,d,e)"></a>matrix(a,b,c,d,e)</h2><p>这是一个综合属性，之前的平移，缩放，旋转，倾斜都能通过这个矩阵函数实现，对，大学里<strong>线性代数</strong>中的矩阵 T_T；</p>
+<p>其实这个函数就是前面四种操作的<strong>原理</strong>，函数共有六个参数，四种操作都对应不同的参数改变方式，像我们这种非数学专业的就不赘述原理了，前面的操作基本够用了(想寻找刺激就去百度“css matrix”吧)~~;</p>
+<h1 id="3D变换"><a href="#3D变换" class="headerlink" title="3D变换"></a>3D变换</h1><p>所谓3D就是在前面2D平面上多了一个<strong>z轴</strong>，方法名也差不多，然后能以分别以三根轴位基准进行变换，实现立体效果；</p>
+<p>看一下所有3D操作方法：</p>
+<h2 id="translate3d-x-y-z"><a href="#translate3d-x-y-z" class="headerlink" title="translate3d(x,y,z)"></a>translate3d(x,y,z)</h2><p>结合前面讲的空间坐标系和 x, y, z轴的位置，三个参数分别对应元素在三个坐标轴方向的平移值，也包含三个方法<code>translateX(x)</code>, <code>translateY(y)</code>, <code>translateZ(z)</code>；</p>
+<p>举例：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>50px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>60px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>70px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 简写 */</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>50px<span class="token punctuation">,</span> 60px<span class="token punctuation">,</span> 70px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意：</strong> 关于设置 <code>translateZ(z)</code> 看不出效果的问题，后面说到设置<code>persoective</code>时会解释；</p>
+<h2 id="rotate3d-x-y-z-deg"><a href="#rotate3d-x-y-z-deg" class="headerlink" title="rotate3d(x,y,z,deg)"></a>rotate3d(x,y,z,deg)</h2><p>参数<code>x, y, z</code>为空间坐标系的一个坐标位置，然后由原点<code>(0, 0, 0)</code>指向这个点形成一个有方向的新轴，数学中称矢量，最后一个参数就是元素围绕刚才所形成的新轴旋转的度数；</p>
+<p>也包括 <code>rotateX(deg)</code>, <code>rotateY(deg)</code>, <code>rotateZ(deg)</code>，之前2D的 <code>rotate()</code> 便是这里的 <code>rotateZ()</code>；</p>
+<p>至于旋转的方向，判断方法类似于物理中的<strong>左手定则</strong>：角度指定为正的话，左手拇指与四指垂直，拇指指向元素围绕旋转的坐标轴或自定义轴，四指弯曲围绕方向就是旋转方向；</p>
+<p>举例：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotataZ</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 自定义轴旋转 */</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate3d</span><span class="token punctuation">(</span>10<span class="token punctuation">,</span> 10<span class="token punctuation">,</span> 10<span class="token punctuation">,</span> 30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>rotateX(30deg)</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c13d0c4eef.png" alt="rotateX"></p>
+<p><strong>rotateY(30deg)</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c142489a1d.png" alt="rotateY"></p>
+<p>关于为什么这里的旋转不是想象中的效果，而是缩小，主要是没有设置视点，后面会讲；</p>
+<h2 id="scale3d-x-y-z"><a href="#scale3d-x-y-z" class="headerlink" title="scale3d(x,y,z)"></a>scale3d(x,y,z)</h2><p>元素关于三个轴的缩放比例，包括<code>scaleX(x)</code>, <code>scaleY(y)</code>, <code>scaleZ(z)</code>，举例：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleZ</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 简写 */</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale3d</span><span class="token punctuation">(</span>2<span class="token punctuation">,</span> 2<span class="token punctuation">,</span> 2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要<strong>注意</strong>这里的<code>scaleZ()</code>，正常情况下，扩大z轴会是物体<strong>变厚</strong>，但是css里面呈现的平面元素并没有<strong>厚度</strong>，所以这里的缩放z轴其实是缩放元素在z轴的<strong>坐标</strong>，所以要有效果必须要指定<code>translateZ()</code>的值；</p>
+<p>举例：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">perspective</span><span class="token punctuation">:</span> 500<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 必须这个顺序，先缩放后平移，不然无效果 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleZ</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2019/01/26/5c4c17ef48ae2.png" alt="scaleZ"></p>
+<p>按照上面样式才能看到<code>scaleZ(2)</code>的效果，因为后面在z轴上移动了<code>100px</code>，缩放比例为2，最终会移动<code>200px</code>，屏幕上则表现为元素放大了一下，这是透视效果，就是那个 <code>perspective</code> 值，下面会讲到；</p>
+<h2 id="matrix3d"><a href="#matrix3d" class="headerlink" title="matrix3d()"></a>matrix3d()</h2><p>和前面2D的<code>matrix()</code>相似，只不过这里括号里的参数有<strong>16个</strong>，矩阵更加复杂，跳过吧﹋o﹋，有兴趣可以自行百度~~；</p>
+<h2 id="perspective"><a href="#perspective" class="headerlink" title="perspective"></a>perspective</h2><p>在上面的示例中，有关z轴的平移和缩放通常情况下是看不出效果的，正是缺少这项属性值，叫做 <strong>透视</strong>，美术或设计中会出现这个词汇，就是实现物体近大远小的效果，远小最终会小到一个点，那就是 <strong>透视点</strong>，<code>perspective</code>就是用来设置那个点距离元素有多远，一般300~600很体现很好的透视效果，<strong>值越小元素透视变形越严重</strong>；</p>
+<p>需要<strong>注意</strong>的是，这项属性设置在应用透视效果元素的<strong>父元素</strong>的样式中，才能看出效果，例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">perspective</span><span class="token punctuation">:</span> 500<span class="token punctuation">;</span>
+    <span class="token comment">/* 考虑浏览器兼容 */</span>
+    <span class="token property">-webkit-perspective</span><span class="token punctuation">:</span> 500<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>也可以设置在元素本身，格式为：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>rotateX(45deg)</strong> 的更真实的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c1929babb1.png" alt="rotateX"></p>
+<p><strong>rotateY(45deg)</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c19c45bbb4.png" alt="rotateY"></p>
+<h2 id="perspective-origin"><a href="#perspective-origin" class="headerlink" title="perspective-origin"></a>perspective-origin</h2><p>此项设置透视点的位置，默认在元素几何中心，需要设置的话，格式如下：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 默认中心 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> center center<span class="token punctuation">;</span>
+    <span class="token comment">/* 左上角 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> left top<span class="token punctuation">;</span>
+    <span class="token comment">/* 右边中心 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> right center<span class="token punctuation">;</span>
+    <span class="token comment">/* 底部中心 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> bottom center<span class="token punctuation">;</span>
+    <span class="token comment">/* 也可以是长度 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> 30px 40px<span class="token punctuation">;</span>
+    <span class="token comment">/*最后记得加 -webkit- 兼容 */</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>perspective-origin: left center</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c1c4ab6feb.png" alt="lc"></p>
+<p><strong>perspective-origin: right center</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c1c4a7c0bf.png" alt="rc"></p>
+<h2 id="backface-visibility"><a href="#backface-visibility" class="headerlink" title="backface-visibility"></a>backface-visibility</h2><p>翻译过来叫背面是否可见，可以设置<code>visible</code>和<code>hidden</code>，默认可见，比如元素正面有文字，设置背面可见，则关于y轴旋转180°后元素内文字变成镜像，否则不会出现；</p>
+<p><strong>backface-visibility: visible</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c1d8b0651d.png" alt="vi"></p>
+<p><strong>backface-visibility: hidden</strong> 的效果(有旋转，只是背面不可见，则看不见了)：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c1e297689d.png" alt="hi"></p>
+<h1 id="其他属性"><a href="#其他属性" class="headerlink" title="其他属性"></a>其他属性</h1><h2 id="transform-origin"><a href="#transform-origin" class="headerlink" title="transform-origin"></a>transform-origin</h2><p>设置2D/3D变化的基准，可以是长度值，也可以是 <code>left, right, top, bottom</code>，例如：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 关于元素左上角旋转 */</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> left top<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2019/01/26/5c4c1ed5f21a6.png" alt="lt"></p>
+<h2 id="transform-style"><a href="#transform-style" class="headerlink" title="transform-style"></a>transform-style</h2><p>设置元素如何在3D空间呈现被嵌套的元素，选择是 <code>flat</code> 和 <code>preserve-3d</code>，默认<code>flat</code>；</p>
+<p>这里这么来理解，之前我们对一个元素执行变换时，都是以屏幕所在平面的坐标系在变换，但是元素如果存在子元素的话，<code>transform-style</code>就是用来确定在哪套坐标系上进行变换，<code>flat</code>表示任然以屏幕坐标系为基准，<code>preserve-3d</code>表示以<strong>变换后的父元素所在平面的坐标系</strong>为基准；</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+    <span class="token property">-webkit-transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">#child</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">perspective</span><span class="token punctuation">(</span>500<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>flat</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c238db14da.png" alt="flat"></p>
+<p><strong>preserve-3d</strong> 的效果：</p>
+<p><img src="https://i.loli.net/2019/01/26/5c4c238dc1ae1.png" alt="pre"></p>
+<p>例如，父元素绕x轴旋转了45度，并且设置<code>transform-style: preserve-3d</code>，而嵌套的子元素只绕y轴旋转45度，那么最终效果就是子元素绕父元素平面的y轴旋转了45度，看起来就像先x轴转45度后y轴转45度的效果；</p>
+<p>最后，别忘了为以上所有特性添加浏览器兼容前缀；</p>
+<p>顺便附上一个以上功能综合效果的演示页面，请戳下面：</p>
+<h2 id="CSS-3D"><a href="#CSS-3D" class="headerlink" title="CSS 3D"></a><a target="_blank" rel="noopener" href="http://huangqiyun.top/css3d/">CSS 3D</a></h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">kukuqi666</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://kukuqi666.github.io/2024/09/27/css/css3-zhi-2d-yu-3d-bian-huan/">https://kukuqi666.github.io/2024/09/27/css/css3-zhi-2d-yu-3d-bian-huan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">kukuqi666</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/css2d-css3d-transform/">
+                                    <span class="chip bg-color">css2d css3d transform</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz',
+        appKey: 'itmzT1JbXfAjVwMqDhGPzU45',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/09/27/css/css-xuan-ze-qi-xiang-xi-jie-shao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSS 选择器详细介绍">
+                        
+                        <span class="card-title">CSS 选择器详细介绍</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            css选择器详细介绍与举例
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CSS/" class="post-category">
+                                    CSS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/css%E9%80%89%E6%8B%A9%E5%99%A8-%E5%86%85%E8%81%94%E5%B5%8C%E5%85%A5%E5%A4%96%E9%83%A8%E5%BC%8F-ID%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%8C%BA%E5%88%AB-%E4%BC%AA%E5%85%83%E7%B4%A0/">
+                        <span class="chip bg-color">css选择器 内联嵌入外部式 ID类选择器区别 伪元素</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/09/27/css/css3-guo-du-yu-dong-hua/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CSS3 过渡与动画">
+                        
+                        <span class="card-title">CSS3 过渡与动画</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            CSS3 中的过渡与动画效果的介绍
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CSS/" class="post-category">
+                                    CSS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/css3%E8%BF%87%E6%B8%A1-css3%E5%8A%A8%E7%94%BB-transition-animation/">
+                        <span class="chip bg-color">css3过渡 css3动画 transition animation</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 如梦初醒<br />'
+            + '文章作者: kukuqi666<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2024</span>
+            
+            <span id="year">2018</span>
+            <a href="/about" target="_blank">kukuqi666</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">166.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "09";
+                    var startDate = "20";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/kukuqi666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:kukuqi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100083476812104" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://x.com/wnfng521" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+    <a href="https://t.me/kukuqi666" class="tooltipped" target="_blank" data-tooltip="关注我的telegram" data-position="top" data-delay="50">
+        <i class="fab fa-telegram"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var searchFunc = function (path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function (xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function () {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function () {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function (data) {
+                            var isMatch = true;
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title !== '' && data_content !== '') {
+                                keywords.forEach(function (keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i === 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start === 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substr(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function (keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                    });
+
+                                    str += "<p class=\"search-result\">" + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        };
+
+        searchFunc('/search.xml', 'searchInput', 'searchResult');
+    });
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

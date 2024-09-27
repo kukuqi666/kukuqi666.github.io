@@ -1,0 +1,1627 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="记一次拿下网络诈骗者站点的全过程与套路分析, 如梦初醒, kukuqi666">
+    <meta name="description" content="从来没有真正的绝境，只有心灵的迷途">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>记一次拿下网络诈骗者站点的全过程与套路分析 | 如梦初醒</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="如梦初醒" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">如梦初醒</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">如梦初醒</div>
+        <div class="logo-desc">
+            
+            从来没有真正的绝境，只有心灵的迷途
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/kukuqi666/kukuqi666.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Home page
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/kukuqi666/kukuqi666.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Home page" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">记一次拿下网络诈骗者站点的全过程与套路分析</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/exploit-hack-%E6%B8%97%E9%80%8F-%E5%AE%89%E5%85%A8-%E8%AF%88%E9%AA%97/">
+                                <span class="chip bg-color">exploit hack 渗透 安全 诈骗</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Exploit/" class="post-category">
+                                Exploit
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-09-27
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    8.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    28 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        <!-- 代码块折行 -->
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>这是一则漫长又跌宕起伏的故事，小伙伴们请随意就坐，自备茶点；全文包含信息收集与攻克的详细全过程，以及对该类型诈骗思路的分析拆解，以提高防范意识；</p>
+<h2 id="0x00-梦的开始"><a href="#0x00-梦的开始" class="headerlink" title="0x00 梦的开始"></a>0x00 梦的开始</h2><p>那是一个阳光明媚的晌午，日常的搬砖过程中收到一封公司邮件，</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/71ef1a39064df09076dfb2039dab7c63.png" alt="email-send"></p>
+<p>看到这熟悉的措辞，又瞄了一眼下面的附件内容，熟悉的气息扑面而来，就顺手保存了下来；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f3d15b9401c60d4bb0e4bc58c223c6ff.png" alt="email-qrcode"></p>
+<p>随即管理员立马发现了不对劲，追发邮件说员工账号被盗用，不要轻信邮件内容，原始邮件也被标为垃圾邮件（上次的类似邮件删的太突然，事情还没开始就结束了，这次总跑不掉了(￣_,￣ )，作为当代好青年，五星好市民，是时候发扬一下活雷锋精神了）；</p>
+<p>而这张图片，就成了一切梦开始的地方……</p>
+<h2 id="0x01-信息收集"><a href="#0x01-信息收集" class="headerlink" title="0x01 信息收集"></a>0x01 信息收集</h2><h3 id="0x001-审查域名"><a href="#0x001-审查域名" class="headerlink" title="0x001 审查域名"></a>0x001 审查域名</h3><p>起始信息非常有限，开局一张图，剧情全靠猜，不过这个入口也足够了，先拿出家伙解析下二维码中的信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a48005f1308b8590774aa750a9f60ffc.png" alt="email-qrcode-analyze-url"></p>
+<p>没有额外的数据，只有一串网页链接，看着这域名名称，嘴角微微上扬；先去解析一下域名：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7e256cf3a4cf67d50e6daf3616ace4de.png" alt="cmd-nslookup"></p>
+<p>到写文为止已经不能解析该域名了，整顿的倒挺快，不过好在之前有解析备份，域名万变不离其 <code>IP</code>，并且也没有发现使用 CDN，流量全部通往源站；顺手查了一下，是香港的服务器：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/00b8305df79fb2d06497318f55c60d66.png" alt="front-query-ip"></p>
+<p>然后 <code>whois</code> 一下，搜集相关信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/45c898ccbe31a5576147a8e2807cbf93.png" alt="cmd-whois"></p>
+<p>不出意外，又是用的三方注册机构，没有额外的有用信息，不过这个注册时间挺有意思，本月的，骗子同志动作还蛮快的；接下来只能去对方网站瞅瞅；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0f46652c6df7f5330072ecd7b6eb2fd2.png" alt="front-west-whois"></p>
+<p>又是西部数码，看来有些备受青睐，网站提供隐私保护机制，注册信息不对外公开，暂时也获取不到有用信息；</p>
+<h3 id="0x002-审查-IP"><a href="#0x002-审查-IP" class="headerlink" title="0x002 审查 IP"></a>0x002 审查 IP</h3><p>现在唯一的线索就是之前解析的那个 IP 了，一步一步来，先 <code>nmap</code> 扫一波端口服务先，收集更多信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/21c78c8aefe7eac62b36770eedce6c93.png" alt="cmd-nmap-port-services"></p>
+<p>嗯还行，看见了几个熟悉的身影，继续走流程，分别跑下默认脚本分析下端口服务信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/19e1e18d0589f60ae2fcdf4f951d8615.png" alt="cmd-nmap-default-script"></p>
+<p>没有探测倒匿名 ftp，http 支持 <code>TRACE</code>，没有设 <code>httponly</code>，有执行 <code>XSS</code> 的机会，小本本先记下；然后老规矩，默认字典定向爆破一轮先，尝试还是要有的，万一那啥了呢：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/85ca6acf989cc451b6f4501ae1f51286.png" alt="cmd-nmap-ftp-brute"></p>
+<p>剩余端口也都试了，意料之中，没啥收获，看来基本的密码强度意识还是有的；另外之前的扫描扫描中有出现 <code>8888</code> 这个端口，记得这个是服务器管理工具<strong>宝塔</strong>面板的默认后台入口，访问一下试试：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79840be48aacfe2034493217f4e1c312.png" alt="front-baota-login-pre"></p>
+<p>有入口校验，起码证明确实是用的宝塔面板，不过这个爆破应该是不可能去爆破的，记得入口 url 后缀默认大概是 8 位任意大小写字母与数字的组合，就是 62 的 8 次方，大约两百万亿，就挺秃然的，先放在后面再说吧，接下来，继续转战其他方向；</p>
+<h3 id="0x003-审查页面"><a href="#0x003-审查页面" class="headerlink" title="0x003 审查页面"></a>0x003 审查页面</h3><p>来都来了，既然扫码是跳转页面链接，并且端口也开放了 80 和 443，当然要打开网页访问一下康康，同时开启开发者工具，看看有啥小动作：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8d34f834094fee08da471a28cde281cb.png" alt="front-home-mobile"></p>
+<p>哎呀，还识别机型，这靶向用户还挺明确，那就切成移动端看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1aa108c398c5664b907bbfc9e929d3fe.png" alt="front-home-index"></p>
+<p>emm……怎么说呢，有那味儿了，咋一看还真看不出来，模仿的还挺全（不过胆也确实大，政府网站都搞），然后看了下接口返回的头信息，发现使用的 <code>Windows IIS 7.5 + ASP.NET</code> 的服务：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/90bade1cc1b1400eca7a560a777e6d36.png" alt="front-home-headers"></p>
+<p>这个先记着，后面漏洞挖掘用得着，后面试了一圈发现页面都是空壳，只有那个办理入口的弹窗能跳转，跳转页面是：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/664aa5ee850248f5a35f177b8b64ddea.png" alt="front-apply-btn"></p>
+<p>描述的还挺全，好让大家都能对号入座，这里点下立即申请：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a596a0603ab532f0140077f99a55cde.png" alt="front-input-name-id"></p>
+<p>然后就开始了个人信息收集的一条龙服务，先是姓名和身份证号，另外，注意看旁边显示加载的 PNG 头图的名称，额难道这是开发者的疯狂暗示？？这里随便输入条信息进去看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9b26e444dcfd0d0a9365c9a15d423156.png" alt="front-input-name-error"></p>
+<p>居然还有校验，打个断点看看源码逻辑：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/86d78b88d8b87161b5a21ebd3f48b9bc.png" alt="front-input-name-breakpoint"></p>
+<p>一个号码校验都整的这么齐全，还真是费心了，不过前端的校验都是纸老虎，这里也不用什么偏方了，直接用开发者工具的源码编辑覆盖功能，直接给校验函数返回 <code>true</code>：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/87da6c0882cdf0db65dfb3059f129ca2.png" alt="front-input-name-override"></p>
+<p>然后校验通过，进入下一个步骤：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ebc52d6564f8dd670f91ea30a9af82ad.png" alt="front-input-bank"></p>
+<p>这里是要收集银行卡号和密码以及绑定的手机号，唉，意图很明显，哪有打款转账还要对方密码的操作，这里也准备随便填下，银行卡校验用同样的方法绕过一下，不过在其中一个加载的脚本文件中发现了有意思的东西：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2e40af17b56dee1b83056d427bf7ce6a.png" alt="front-input-bank-js-source"></p>
+<p>开发者连源码中的调试数据都不删除，调的阿里支付的接口，正好借对方调试账号用一下下（再次证明了作为开发者，生产环境中代码移除注释的重要性=_=）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/35d83f3268cbcc4ba028f84587664e85.png" alt="front-input-bank-amount"></p>
+<p>然后进入了下一个页面，再次收集姓名和证件号，以及银行卡余额（这里应该是对用户真实情况进行摸底以及其他未知操作），下意识查了自己的余额，唉果然这里连撒谎的勇气都没有 T_T，马上填完进入下一步吧：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5760660b9d9d6e9477bea082c7801cc8.png" alt="front-input-bank-amount-value"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d2f0375b558b747059b6f127c367185d.png" alt="front-submit-loading"></p>
+<p>然后页面会一直加载不断刷新，再无其他跳转，应该是给诈骗者提供操作的时间，那么网页的相关操作就暂时告一段落，大致了解了一些操作步骤，接下来探索一下其他方向；</p>
+<h2 id="0x02-漏洞挖掘"><a href="#0x02-漏洞挖掘" class="headerlink" title="0x02 漏洞挖掘"></a>0x02 漏洞挖掘</h2><h3 id="0x001-SQL-注入"><a href="#0x001-SQL-注入" class="headerlink" title="0x001 SQL 注入"></a>0x001 SQL 注入</h3><p>信息收集差不多了，现在来逐个击破，先从最熟悉的网页端入手，前面审查页面时有不少提交表单和输入框，这些都是潜在的攻破点；挖掘技术哪家强，先祭出神器 <code>Burp</code>，拦截一下之前提交银行卡号密码的表单数据：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/302a800d0aa5d21c68c455131b095938.png" alt="burp-form-field"></p>
+<p>然后对字段值进行简单注入尝试，检查报错信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f8bda2bb8aaeaea3cda51e950261910e.png" alt="burp-sql-inject-simple"></p>
+<p>没反应，应该是有基础校验，再换个：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8568699eada7b7b5e1e88b8e9805e19d.png" alt="burp-sql-inject-union-select"></p>
+<p>有反应，似乎看到了希望，虽然返回乱码了，应该是对方程序处理问题，不过看句式像是 SQL 报错，又接连试了几个，也是同样的返回，那么剩下的冗杂工作，就交给工具进行吧，掏出 <code>sqlmap</code> 跑一波：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0da9a66b9cd6c0dc6fdd9ba56931e813.png" alt="cmd-sqlmap"></p>
+<p>后面换了几轮参数也没成功，应该是过滤机制比较周到，然后在测试另一个页面时，才发现了那段报错信息的原本含义：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4f28761d17a67ad888090fe17d8b7d57.png" alt="burp-sql-inject-err-res"></p>
+<p>嗯还是太年轻，会错意了，应该是程序识别到了字段值中的 SQL 关键字；另外回想起之前扫描到服务可能隐含 <code>TRACE</code> 相关漏洞，测试了下，应该是服务端暂未支持：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6029c9633748238aa41a6becdfb9a0db.png" alt="burp-trace-method"></p>
+<p>然后又想了想，针对密码字段进行数据库表字段设计时，应该会考虑其字符位数低的特点，减少空间占用，因为这是银行卡密码，都知道是 6 位数字，这里传个大数看看有没有惊喜：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0831994a08dc2a0d4644d0965b1a6f30.png" alt="burp-post-mass-data"></p>
+<p>尴尬，是有惊无喜，应该是没有特别处理，直接反馈为服务端错误；后面又陆续换了几个页面，测试下来都没太大收获，场面又一度陷入僵局，只能又暂时转移战场；</p>
+<h3 id="0x002-Metasploit-渗透"><a href="#0x002-Metasploit-渗透" class="headerlink" title="0x002 Metasploit 渗透"></a>0x002 Metasploit 渗透</h3><p>终于到 <code>Metasploit</code> 出场了，蓄势待发，</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e7601b114dc9655b6ac3cffc0f02fa4c.png" alt="msf-banner"></p>
+<p>先搜一下 IIS 的已知漏洞：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c91fd1a62175d80190a7ac107f724825.png" alt="msf-search-iis"></p>
+<p>有不少，那就先调几个条件匹配的试一波，这里只放个示例，就不一一展示了：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/440726e3b1f9df550c0e09404dc4ba1f.png" alt="msf-run-ektron"></p>
+<p>然后就是其他几个端口、服务，挨个测试一遍，也没有什么突破，看来补丁都打的挺全；目前又暂时陷入了死胡同，虽然 msf 还有不少模块可以利用，不过暂时不准备继续深入试探了，因为想起来还有另外一件重要的事情还没做；</p>
+<h3 id="0x003-站点目录枚举"><a href="#0x003-站点目录枚举" class="headerlink" title="0x003 站点目录枚举"></a>0x003 站点目录枚举</h3><p>站点目录扫描，这件重要的事怎么能少得了，可供选择的工具很多，如 <code>dirbuster</code> 等，这里我们使用 <code>Burp Suite</code> 的 <code>Engagement tools</code> 里的 <code>Discovery content</code> 工具，进行目录爆破：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b878830935bdb663725a355830f34f48.png" alt="burp-dirbus-menu"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c705a0ca56f0928994a063cf419fd2a6.png" alt="burp-dirbus-config"></p>
+<p>其内置的大量字典已经足够使用了，不过涉及网络请求，这个过程也是异常漫长，不过可以后台跑着，不影响做其他事，这里就直接贴一个扫描结果：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3f5bd22f58cee869c2afc9776f69d250.png" alt="burp-dirbus-sitemap"></p>
+<p>直呼好家伙！不扫不知道，出来吓一跳，居然错过了这么多隐藏入口，小本本记下先，后续挨个探索，不过呢视线情不自禁地锁定到了名为 <code>upload.asp</code> 这个文件上，开发者这么明显的暗示就无需我多言了（ㄟ( ▔, ▔ )ㄏ）；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/20d2f4855235d7d13f972b98ca499d2a.png" alt="burp-upload-get"></p>
+<p>直接访问没什么返回数据，难道是方法不对？换成 <code>POST</code> 表单文件数据再试试：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cf25a1b18ec2531643e80cdff97d9f7.png" alt="cmd-curl-upload-file"></p>
+<p>看来这样上传也没用，也许还要额外的校验参数之类的，上面不是刚扫了一堆没见过的页面嘛，现在回过头去挨个分析下页面源码看看，也许会有收获：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6147aec0750a120b4a424563161d4df0.png" alt="front-upload-source"></p>
+<p>果然，在其中一个页面中，发现了调用这个上传接口的表单，是个隐藏元素，结合页面内容，应该是用于收集用户上传的某些证件信息，身份证照片之类的，然后看了对应的 js 源码，果然存在一些校验和接口参数：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/be5a2f453b02e1a0358e554c21118aa6.png" alt="front-upload-js-fn"></p>
+<p>这里去分析调用这些函数再上传文件太费劲了，这不是个隐藏表单嘛，直接改下代码通过 UI 操作多轻松 (¬‿¬)：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0ab612a311cb1523c80b0c949882bec4.png" alt="front-upload-show-form"></p>
+<p>样子虽然简陋了点，管他的，能跑起来就行了，上传个文件试试：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f4c6aaf2c3f6bba0451172cad2be15d7.png" alt="front-upload-done"></p>
+<p>然后再访问看看效果：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/23178a810d49fe1ad464c24e07010aae.png" alt="front-upload-access"></p>
+<p>好家伙，大写的激动！嘴角再度微微上扬，不过先冷静下，再试试有没有文件类型校验，服务是 <code>ASP.NET</code> 的，那就简单传个 asp 程序试试，下面的代码会在页面输出站点运行服务的名称：</p>
+<pre class="line-numbers language-asp" data-language="asp"><code class="language-asp">&lt;% response.write(Request.ServerVariables(&quot;SERVER_SOFTWARE&quot;)) %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后上传上去看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7f49dd3dc7fc6573e04dae97f536a9b0.png" alt="front-upload-asp-info"></p>
+<p>这……俺还能说什么呢，此时无声胜有声 <code>$_$</code> ，不过这并不是终点，这只是一个良好的起点，一切才刚刚开始 (¬‿¬)；</p>
+<h3 id="0x004-意外收获"><a href="#0x004-意外收获" class="headerlink" title="0x004 意外收获"></a>0x004 意外收获</h3><p>其实网站目录中还有一个很让人在意，就是叫 <code>jieliuzi</code> 这个目录，虽然摸透了对象开发者喜欢汉语拼音命名的习惯，但是这个含义始终未能参透，连蒙带猜外加输入法都未得其解，甚至后面进去一探究竟后没没想明白 <code>=_=</code>，中华文化真是博大精深；不管了，看看页面访问结果：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c4bef9177ff0256aa4dad52f4b0090cd.png" alt="front-jieliuzi-login"></p>
+<p>是个登录页，十分简洁，而且这其实是个 PC 站点页，骗子在某些方面也挺有情调的，这里不作展示是由于整图过于刺激（怎么说呢，额，这登录框真白），怕过不了审；另外，注意一下这个网页最上面的标题名，第一反应就是应该不会是简单的字面意思，听着也不像啥好词儿，为此专门去百度了一下：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/12dc84c84add94b1d07107db3d6f379e.png" alt="front-whaling-meaning-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a1ba596c8eca9db9d5a541e4ab86f2f8.png" alt="front-whaling-meaning-2"></p>
+<p>em……又长见识了，原来诈骗也能是一门学问，再结合最开始那张二维码的来源（企业邮件），看来是这么个意思了，大家平时也都<strong>注意警惕</strong>一下；</p>
+<p>随后试了下登录，没有验证码或超时超次数验证这些，并且也没挖掘到可利用的 SQL 注入点，这种情况就该 <code>Burp</code> 的 <code>Intruder</code> 出场了，后台登录名一般都是 <code>admin</code>，密码就祭出 <code>rockyou.txt</code> 跑一波先：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8c5bd59cc4fa9532a054ee5f3f084017.png" alt="burp-jieliuzi-intruder-config"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e6af5c6f40b5c7ccde58ed9a74a50c43.png" alt="burp-jieliuzi-intruder-running"></p>
+<p>这也是一个比较漫长的过程，不过一会儿之后再去看的时候就发现了变化：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e0626c5eb0a01738781a3d7a99db354e.png" alt="burp-jieliuzi-intruder-sql-warn"></p>
+<p>需要留心的就是这里的返回数据长度，因为正常讲大部分试的密码都是错误的，服务器响应的数据大小也都是一样的，突然出现不一样的长度多半就出现了转机，这里看来是识别出了 sql 语句，和之前一样报错，然后看最上面那条：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/138aaa96102f0c8b51fa8ec02d92e86f.png" alt="burp-jieliuzi-intruder-find"></p>
+<p>整个列表中就这一条最特别，看返回也是 302 重定向，看来应该是密码对了跳转进页面了，然后看这密码，也是够随意的，看着简单，猜的时候谁又能想到呢，登录进去看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2ff0ec6f08fc719996181db6c2be083e.png" alt="front-jieliuzi-order-list"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a90484bd36710c588c1353cf843be27.png" alt="front-jieliuzi-ip-list"></p>
+<p>……，唉，怎么说呢，应该是触目惊心吧，虽然数量没有一些媒体平台时不时报道那些的那么夸张，但也不是一个小数目了，而且每一处记录的银行卡账号、密码、身份证号、手机号、验证码、IP位置这些，都是近乎真实的；我不是正义的制裁者，也没有多少执行正义的力量，最多就热心的帮他们删个库再跑路，个人的力量太小了，所以这些还是都后面交给警察蜀黍处理吧，正义可能会迟到，但不会缺席。</p>
+<h2 id="0x03-获取权限"><a href="#0x03-获取权限" class="headerlink" title="0x03 获取权限"></a>0x03 获取权限</h2><h3 id="0x001-Get-webshell"><a href="#0x001-Get-webshell" class="headerlink" title="0x001 Get webshell"></a>0x001 Get webshell</h3><p>暂时先抛开题外话，上面进行到了文件上传这一步，文件上传可以意味着很多事情，可执行文件的上传便可以实现获取服务器的系统操作权限，当然这里的网页应用程序的相关权限一版很低，提权的事就是后话了；当前任务是拿下网站操作权限，即 <code>webshell</code>，继续走流程，先上传个简单的 asp 版<strong>一句话木马</strong>：</p>
+<pre class="line-numbers language-asp" data-language="asp"><code class="language-asp">&lt;% execute(request(&quot;pass&quot;)) %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后就该 <strong>亮剑</strong> 了：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d2202af3b84d8959a2ea2afc9c940605.png" alt="antsword-add-data-menu"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8d150a379dd79c5e591b54882270b708.png" alt="antsword-add-data-detail"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/68ff23b04af39ce9f15cf1f4f8cea8f6.png" alt="antsword-add-data-success"></p>
+<p>搞定，进去康康：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/798cf01166447fd6e6ba9aeae0bb7eb5.png" alt="antsword-wwwroot-list"></p>
+<p>文件相关操作：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e96a706718816f732f67a8bd96852ed2.png" alt="antsword-wwwroot-list-menu"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c2877aa2960d9304a6e27b7d1723001a.png" alt="antsword-file-edit"></p>
+<p>数据库相关操作（对应之前后台页面的展示数据）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/816bdbe3efb9ed907bdf26b276e963e3.png" alt="antsword-db-bank"></p>
+<p>命令行终端相关操作：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/acacf5491b371007aec9628e855783af.png" alt="antsword-cmd-home"></p>
+<p>甚至获取 Windows 系统信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6603300342b52e6fdb2540ac88b87f94.png" alt="antsword-cmd-systeminfo"></p>
+<p>好了，这不啥都有了，还要啥自行车，但也不能止步于此，虽然现在拥有了对这整个站点的操作权限，包括文件及数据库的增删改查等，但也不至于为了正义用爱发电，每日蹲点删库删站，我们的目标还在山的那边 (ง •_•)ง</p>
+<h3 id="0x002-Backdoor"><a href="#0x002-Backdoor" class="headerlink" title="0x002 Backdoor"></a>0x002 Backdoor</h3><p>俗话讲，要生于忧患，虽然现在入口打通了，但是凡事都要留一手（我更喜欢留多手），防止木马那天被管理员察觉并清理就尴尬了，所以找几个隐蔽的位置，再上传几个，比如平时几乎不被注意的 css 或图片等静态资源文件夹，js 库文件等，文件命名上也可以花点心思，模仿已有文件或者配置文件之类的，使人有一种一眼看上去是正常文件的幻觉（+_+）；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/92437e2f9f922984e02cc3d03c6a764c.png" alt="antsword-backdoors"></p>
+<p>当然，还可以利用一种技术，简单讲就是 Windows 中我们熟知的隐藏文件，一般一些软件或系统的配置文件会通过这样的方式隐藏，防止普通用户误删改，查看也能简单，像下面这样勾选一些就都出来了：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a4f97cd71db3db89ebd0055bf61e43fa.png" alt="antsword-explorer-hidden-file"></p>
+<p>所以我们这里可以通过 shell 命令把指定文件隐藏掉，使得其不会被轻易发现：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7893778f1b1e287c6bf4ee6b9dc86203.png" alt="antsword-cmd-attrib"></p>
+<h3 id="0x003-Get-shell"><a href="#0x003-Get-shell" class="headerlink" title="0x003 Get shell"></a>0x003 Get shell</h3><p>目前我们获取到的还只是 <code>webshell</code>，虽然可以模拟执行终端命令，但是这些都是通过上传的 asp 后门程序执行的，就是说每步操作都会发起 http 请求，防止被平台记录，需要获取系统 <code>shell</code>，即上传系统可执行文件（如 <code>.exe</code> 文件，就是俗称的<strong>木马</strong>），至于如何生成，就需要 <code>metasploit</code> 再次登场了；</p>
+<p>这里又涉及一些东西，getshell 的木马一般有两种，正向连接和反向连接，基础的认知可能是将程序上传至机器，然后运行就会后台监听某个端口，等待外部的连接，连上后就可以通过两端的交互达到控制系统，当然前提是系统防火墙没开或者允许该端口放行，而通常服务器都会开启防火墙并过滤端口，只放行指定的几个；</p>
+<p>所以后面出现了第二种类型，反向连接，或者叫反弹 shell，简单讲就是第一种类型反转一下，不是目标机器等待我们连，而是我们外部的机器等待目标机器来连接，这解决了防火墙端口的限制，因为防火墙一般不会特意去限制出站端口，当然这种类型又增加了额外的限制，首先我们需要一台具有公网 IP 的机器，像平常这种连着 WiFi， 深埋于 n 层路由下的设备，基本可以放弃了（使用端口转发也需要运营商提供公网 IP），另外就是需要目前机器可访问公网，因为有些服务器考虑安全因为是在内外下的，用反向代理等方式传输流量，无法访问外网；</p>
+<p>由于不清楚对方防火墙情况，先用反向连接看看，手边暂时没有公网机器，就先用 <code>ngrok</code> 转发一下端口流量，先启动服务：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b59e7314e81b6fc4f0e908ef25d811d1.png" alt="cmd-ngrok-running"></p>
+<p>从之前收集的数据中得知，对方机器是 x64 Windows 系统，那么这里就直接用 <code>msfvenom</code> 生成对应的 <code>payload</code>（暂时先不考虑加密加壳这些，传上去看看是否被杀毒再说）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4334d9043acb14e4304eb17907739052.png" alt="cmd-msfvenom-generate-api"></p>
+<p><code>reverse_tcp</code> 是反向连接，<code>bind_tcp</code> 是正向连接，连接地址填 ngrok 提供的链接，端口填链接对应的，然后生成执行文件，最后上传到对方站点某个隐蔽的目录下：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ef2e60926dd67248c43b53c4a45238e8.png" alt="antsword-upload-api"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1839fb16ce9193dae4b6e4ea77d0687b.png" alt="antsword-upload-api-success"></p>
+<p>然后在 msf 中启动监听程序，等待对方连接，地址填本地，端口填之前 ngrok 中设定的本地端口，使用的 pyaload 要和之前 <code>msfvenom</code> 中配置的一致，不然会连接失败；完成后，一旦目标上的程序启动，首先就会访问 ngrok 域名和对应端口，ngrok 服务再把传输数据转发到本地的监听端口中，数据就通过这一层中介进行双向传输：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/81379e4c64cf9a8d276db494b7f29ce2.png" alt="msf-run-reverse-listener"></p>
+<p>然后在 webshell 中执行它：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0576f7065162dacfff99d3cff3167044.png" alt="antsword-cmd-run-api"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/782b55555c578e837415ac89af46f458.png" alt="antsword-cmd-list-api"></p>
+<p>运行成功，这是切换回 msf 一会后就会有所反应，表示连接成功：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ba2645d282c9e6fac290c11e6f7822d5.png" alt="msf-reverse-connected"></p>
+<p>现在再查看 ngrok 服务就回显示有一条连接，表示可以进行通信了：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/596058e521f24fd024d867742025062f.png" alt="cmd-ngrok-connected"></p>
+<p>现在连接成功进入的操作界面是 <code>meterpreter</code>，这是 <code>metasploit</code> 提供的有许多拓展功能的集成终端，类似于 cmd、shell，但是功能更强大，可以执行切换目录、获取系统信息、操作进程、上传下载文件、进一步渗透等操作，甚至在拿下 system 权限后，还能解锁控制鼠标键盘、屏幕截图或实时预览等高级功能，这里先查询下基础信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9d908ddb2f4fbaa742e298ef6836c295.png" alt="meter-getinfo"></p>
+<p>和之前的虚拟终端一样，当前操作用户是 IIS，当然这里想用 cmd 终端操作也是可以的，执行下 <code>shell</code> 命令进入系统 <code>shell</code>，操作和命令与系统命令提示符没有两样：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b44e3f21ad6e7b217925b7f9e8d02951.png" alt="meter-shell-command-test"></p>
+<p>初次进入可能会出现中文字符乱码情况，因为 cmd 默认使用的字符集问题，手动切换成 UTF-8  的 65001 就行了，可能唯一不太方便的地方，就是没有集成历史记录的功能，要重试上个命令得全部重打一遍，毕竟是网络转发数据，不应要求太多：</p>
+<h3 id="0x004-Get-system"><a href="#0x004-Get-system" class="headerlink" title="0x004 Get system"></a>0x004 Get system</h3><p>如上面所讲，目前获取到的只是普通账户的 <code>shell</code>，虽然有一定的终端操作权限，但还是远远不够的，会有诸多限制，比如无法操作一些服务、增删系统账户、访问系统目录等等，那么接下来的操作就是 <strong>shell 提权</strong>了，或者叫 getsystem，这也是 meterpreter 中的一条命令，功能和描述一样，会尝试多种漏洞进行权限提升以获取 <code>SYSTEM</code> 权限，只不过试了下似乎都没有成功，只能另寻他法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d000c9c1bef9f90f8f818ea876333ae5.png" alt="meter-getsystem-err"></p>
+<p>这里值得说的是，可能有小伙伴会有疑惑，认知中 Windows 系统中权限最高的不应该是超级管理员 <code>Administrator</code> 吗，为什么一直在强调获取 <code>SYSTEM</code> 账户权限，其实严格来讲，Administrator 账户虽然成为管理员，其实权限并不是最高的，也有很多它做不了的事，举个简单的例子就是删除系统账户 <code>Guest</code>：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/22de2396f6e238c277c6e8bb219970ff.png" alt="cmd-admin-del-guest"></p>
+<p>以及其他一些系统层面的事，administrator 也做不到，而这些高层次的操作都由 <code>SYSTEM</code> 账户来完成，虽然在账户设置里面从没见过它，但它是确确实实存在的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/65dad55aff53b181a1579227d45d8ec5.png" alt="explorer-system-account"></p>
+<p>就像网站服务其实也有个对应的 www 账户一样，应该没人曾经登录过它吧；</p>
+<p>前面讲获取 system 权限使用 <code>getsystem</code> 不奏效，那么就继续试探一下其他路子，也就是<strong>令牌窃取</strong>，令牌指的登录令牌，类似登录网站要用的 <code>cookies</code> 或者 <code>token</code>，而 Windows 中存在两种令牌：<code>Delegation Tokens</code>（授权令牌） 和 <code>Impersonation Tokens</code>（模拟令牌），前者用于交互式的登录，如直接或使用远程桌面，输入账号密码登录进系统，而后者用于非交互式的会话中，访问网络驱动或其他域登录脚本程序；</p>
+<p>这里要利用的正是模拟令牌，窃取的过程有些类似网站里的 cookies 窃取，由于令牌在重启系统之前，会一直被保留，所以有账户登陆过的话，其令牌有机会被冒充使用，而且有授权令牌登录的账户注销的话，令牌也会转化为模拟令牌，同时其原本的相关权力都会保留；</p>
+<p>这里接下来就先使用 <code>incognito</code>（伪装、隐瞒的意思，偷盗者总是会先隐藏起来嘛）插件，进行令牌盗取，再用 <code>list_token</code> 命令查询当前能获取的令牌情况（数量因当前的 shell 权限而定）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de2c873714be2f42669262b201e07d8a.png" alt="meter-list-tokens"></p>
+<p>这里可以看到可盗取令牌的账户，要窃取的话就使用 <code>impersonate_token</code> 命令：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/98668a03e33ea01413e04d76bbc69ff4.png" alt="meter-impersonate-iusr"></p>
+<p>虽然可以窃取成功，但试了下这个账户的权限也不高，尝试性的试了下 system 账户也失败：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3634817a6458e1f75b41212d3bb8b56e.png" alt="meter-impersonate-try-system"></p>
+<p>所以只能再尝试其他提权漏洞了，这里就先用 <code>bg</code> 命令把当前 meterpreter 会话切换至后台，回到 msf 界面，使用一个已知的 <code>Rotten Potato</code> 提权漏洞：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7f05f72f8b731fbbed0ca140bef9d7a1.png" alt="msf-use-rotten-potato"></p>
+<p>需要的唯一参数是会话 id，正好可以利用刚才的 meterpreter 会话，然后还需要设置一个 payload，这里之前有了解过，目前机器可以访问公网，而且虽然有使用防火墙过滤端口，但是似乎一直开着这么一群端口：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/50c5b100f3c7b8f971790d86219c4350.png" alt="meter-netstat"></p>
+<p>这是远程 RPC 需要使用的一系列端口，所以盲猜机器会开放 <code>49150-49160</code> 这么一个范围的端口，那么就见缝插针，选一个没被占用的用于开启监听，这样就能直接使用正向连接了，而不用麻烦的再次使用反向连接：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/201a372894dddaa85ac8330f3e5f609c.png" alt="msf-config-rotten-potato"></p>
+<p>地址填目标机器的地址，这样运行后就能自动连接到目标机器的监听端口上，这里先运行一下试试能不能成功：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ec082097d3fac9016a9a196e18416d5a.png" alt="msf-run-rotten-potato-success"></p>
+<p>哟西！竟然比想象中的顺利，就不多解释了，检查一下权限和令牌先：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/28d2b9bdbd83f1a21bfe822930bf1ba0.png" alt="msf-rotten-potato-getsystem-success"></p>
+<p>Nice，成过窃取到了 system 账户的令牌，以对方身份登录成过，接下来就可以试试权限了：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c75111442ded69caf47426edcd7a12ea.png" alt="meter-shell-system-add-user"></p>
+<p>进入 shell 后账户确实变成了 SYSTEM，也能增加或删除账户了，那么至此，成过拿下系统最高权限，成功 getsystem；</p>
+<h3 id="0x005-权限测试"><a href="#0x005-权限测试" class="headerlink" title="0x005 权限测试"></a>0x005 权限测试</h3><p>回想起前面有说过，高权限可以获取屏幕截图或者实式预览，那么这里来就看一下下：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/04c040120e8dd1250193e93e86d970a8.png" alt="meter-screenshot-saved"></p>
+<p>成功截图到了指定文件，打开看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b6ab19e276625531c480189b2151441c.png" alt="meter-screenshot-view"></p>
+<p>虽然分辨率有点低，但大致是个登录界面的模样，然后实时预览看看，由于这个要启动图形服务，就在虚拟机里跑一下：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e0b6dafaee6d510b0b3714e28ff0c5a5.png" alt="meter-screenshare"></p>
+<p>大晚上的，应该没啥人登录，，不过光是预览还不够，现在是可以直接远程登录进去的，只是需要额外的一些操作，先建立一个账户并分配管理员权限（即加入 <code>Administrators</code> 用户组），名字同样可以取得有一定迷惑性：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c74ab2f32842ca657cc552ec2bdfe662.png" alt="meter-add-user-sys"></p>
+<p>不过光是这样还仍没有远程登录的权限，需要将用户分配进远程桌面用户组才具有登录权限：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7ec802090186e478d1beada96f083c3a.png" alt="meter-add-sys-rdp"></p>
+<p>然后这里本来是要开启远程桌面服务的（<code>TermService</code>），结果查询发现是已经开启的，然后一路追踪到了服务对应的进程，进程对应的端口：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ab5f4a5abc355960370a2ebdd7f5fcc3.png" alt="meter-shell-find-termservice"></p>
+<p>居然默认端口从 3386 改成了 10086，有意思，之前端口扫描默认常用端口，难怪没有扫出来，既然现在用户和密码都有了，登录进去看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/328e0e68c577f88b5006c767fee66300.png" alt="rdp-connect-pannel"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4476b10573d23f791824999e67dbc088.png" alt="rdp-connecting"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6280eda3851d9c7b5574371c2c57afff.png" alt="rdp-desktop-view"></p>
+<p>唉，都舍不得掏钱整台配置好一点的，一点都不懂得投资 ㄟ( ▔, ▔ )ㄏ，没意思，擦擦屁股溜了溜了(～￣▽￣)～；</p>
+<h3 id="0x005-System-Backdoor"><a href="#0x005-System-Backdoor" class="headerlink" title="0x005 System Backdoor"></a>0x005 System Backdoor</h3><p>老规矩，任何阶段都需要留一手，并且现在 system 权限，因此只要留下后门那么再次连接就直接具有 system 权限，那么话不多说直接上传，文件名同样可以取得有一定迷惑性：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cddd4b926408cbd435cc66f080535766.png" alt="meter-upload-conf"></p>
+<p>然后配置程序开机启动：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/fabb2941bc7d64039abf46956ec1c0e5.png" alt="meter-shell-reg-add"></p>
+<p>当然，要想再留一手就可以再创建个系统服务，只是生成的 payload 要用 service 类型的，不然会启动失败：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9c03e1304a1ed949a460c1151bb3922d.png" alt="cmd-gen-payload-exe-service"></p>
+<p>然后上传后在目标机器创建服务，配置开机自启，也可以再额外配置启动失败后自动重启服务，或者最近调用执行其他程序，最后再手动启动一次服务：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4841c0e75177b1a1738983fcfb2d3ed8.png" alt="meter-shell-sc-create"></p>
+<p>至此，大部分流程基本结束，拥有系统权限可以做更多的拓展渗透，这些都是后话；</p>
+<h2 id="0x04-套路分析"><a href="#0x04-套路分析" class="headerlink" title="0x04 套路分析"></a>0x04 套路分析</h2><h3 id="0x001-作案工具"><a href="#0x001-作案工具" class="headerlink" title="0x001 作案工具"></a>0x001 作案工具</h3><p>目前为止一共收集到两个后台，一个宝塔面板和一个捕鲸系统后台，宝塔之前是由于有登录校验，没有获取到登录入口，现在就轻松了，用宝塔自带命令 <code>bt default</code> 查看一下默认入口和账号信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/02241e0504f3c0866d6c1ec34cb20870.png" alt="meter-baota-default"></p>
+<p>额……者用户名难道是要暗示自己输得起？待会用这个账号和密码登进去看看，另外在查看目录时，又发现了有意思的部分：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8f61ea206de3cb03669c7ff6b8ec2db3.png" alt="meter-baota-hosts-list"></p>
+<p>这里还列出了不少站点，难道现在诈骗也搞分布式作案了 ( $ _ $ )，或者微诈骗？算了后面有机会再去一锅端了，先登录进去看看：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/597b8572bf66bd35dc0c557ee0ed8a83.png" alt="front-baota-login-default"></p>
+<p>看了默认密码被换调了，虽然现在有权限能直接改掉密码，为了不打草惊蛇，就先放一放，反正进去也都是一些可视化服务器配置，毕竟现在服务器的系统权限都攥在手上呢，不必着急，主要先分析下另外一套系统，那才是骗子们的主要作案工具；</p>
+<p>可以观察页面存在两列功能栏，分别罗列着骗子能远程执行的操作：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/58fc2b0f520bb3f959acb3786cc62df3.png" alt="front-jieliuzi-func-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/363701b7abe8355e2ab7a66ef85d08c8.png" alt="front-jieliuzi-func-2"></p>
+<p>两列功能类似，只有个别区别，这里贴个图对比一下，感觉功能 2 应该是 1 的升级版，多加了几个功能，不过后面发现并不是这么简单，二者都能使用，这样是为了方便骗子连环套取用户信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5dc85e692ba078a62f72268497027b01.png" alt="front-jieliuzi-func-compare"></p>
+<h3 id="0x002-诈骗流程"><a href="#0x002-诈骗流程" class="headerlink" title="0x002 诈骗流程"></a>0x002 诈骗流程</h3><p>最前面的捕鲸邮件这些就不说了，就是邮箱盗号后广发邮件撒网罢了，现在主要来看下上面的一堆功能项，为了行骗过程操作方便，大部分功能应该都是字面意思，还记得最开始审查页面的时候，最后是停在了一个加载页上面，那么应该就是衔接这里的操作的，不同的功能项会触发不同的返回结果：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d2f0375b558b747059b6f127c367185d.png" alt="front-submit-loading"></p>
+<p>这里空讲可能没什么概念，功能汇总有十几二十 个，就挨个给大家实际演示一遍，从骗子的视角过一遍大致就能体会了，还是用之前的表单数据提交，然后这部触发不同的功能后回去看结果：</p>
+<h4 id="“未通过”"><a href="#“未通过”" class="headerlink" title="“未通过”"></a>“未通过”</h4><p>未通过就是上面的加载页面，是默认状态，也是处理不通过返回之前的中转页面；</p>
+<h4 id="“通过–杀它”"><a href="#“通过–杀它”" class="headerlink" title="“通过–杀它”"></a>“通过–杀它”</h4><p>标记通过后会跳转提交验证码的页面，这里获取验证码只是个幌子，真实情况是骗子在向银行发起请求获取验证码，然后骗取用户提交：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/57150b5a30b18917eae26a245523f8b5.png" alt="front-res-1-pass-kill"></p>
+<h4 id="“验证码超时失效，请返回重新获取（不显示金额）”"><a href="#“验证码超时失效，请返回重新获取（不显示金额）”" class="headerlink" title="“验证码超时失效，请返回重新获取（不显示金额）”"></a>“验证码超时失效，请返回重新获取（不显示金额）”</h4><p>如果你这边操作慢了，导致骗子那边输入超时，就会提示让你重新操作获取提交一次（想的真周到=_=）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4401d74a6bb02fc2179f63aa20b6060c.png" alt="front-res-2-msg-timeout"></p>
+<h4 id="“通过-【显示余额】”"><a href="#“通过-【显示余额】”" class="headerlink" title="“通过=【显示余额】”"></a>“通过=【显示余额】”</h4><p>只是不是有提供余额信息嘛，这里就提供用户确认再次骗取二维码（让人觉得像是银行正常查询出来的）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/76c932f4bc92ba7f8c3df8a507d12a0e.png" alt="front-res-3-pass-show-amount"></p>
+<h4 id="“余额查询”"><a href="#“余额查询”" class="headerlink" title="“余额查询”"></a>“余额查询”</h4><p>如果骗子那边执行什么操作核实到金额不对时，就是提示用户重新填写正确金额：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/233d3f61f7c9e8838e31b09c98164085.png" alt="front-res-4-amount-query-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6a37878617da6ce171ce74b980c95f22.png" alt="front-res-4-amount-query-2"></p>
+<h4 id="“取款密码错误”"><a href="#“取款密码错误”" class="headerlink" title="“取款密码错误”"></a>“取款密码错误”</h4><p>如果发现取款密码不对，也会重新让用户提供：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b27181153c17dedd8c2004b229bd2a1e.png" alt="front-res-5-withdraw-passwd-wrong-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b80034ee8786eb9957df30df0810593e.png" alt="front-res-5-withdraw-passwd-wrong-2"></p>
+<h4 id="“手机号码错误”"><a href="#“手机号码错误”" class="headerlink" title="“手机号码错误”"></a>“手机号码错误”</h4><p>然后是手机号：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0b83bb06d879b9264d132bd281fc5ce4.png" alt="front-res-6-phone-wrong-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e216f8b499a1ce91ea0edfcfa2708dd0.png" alt="front-res-6-phone-wrong-2"></p>
+<h4 id="“银行卡号错误”"><a href="#“银行卡号错误”" class="headerlink" title="“银行卡号错误”"></a>“银行卡号错误”</h4><p>银行卡号：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0c64ceaaa55c15044484607369328858.png" alt="front-res-7-bank-wrong-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/63ab797f3cab5f5ccfe6ff5ce73f827f.png" alt="front-res-7-bank-wrong-2"></p>
+<h4 id="“身份证号错误”"><a href="#“身份证号错误”" class="headerlink" title="“身份证号错误”"></a>“身份证号错误”</h4><p>姓名和身份证号：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/42efd2d2b7fd97de9a1a015359f0b041.png" alt="front-res-8-name-id-wrong-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a425ec7a8f554491be9e35be638bb731.png" alt="front-res-8-name-id-wrong-2"></p>
+<h4 id="“审核通过”"><a href="#“审核通过”" class="headerlink" title="“审核通过”"></a>“审核通过”</h4><p>然后是审核通过，让你耐心等待结果（等待骗子把钱套走跑路 $_$）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cd354a0f5f818ccb57e2931d65c54790.png" alt="front-res-9-pass-over"></p>
+<h4 id="“不支持，请更换名下其他银行认证”"><a href="#“不支持，请更换名下其他银行认证”" class="headerlink" title="“不支持，请更换名下其他银行认证”"></a>“不支持，请更换名下其他银行认证”</h4><p>如果发现某些银行卡不太好利用，就会提示更换：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ecf1b09a0cc65a00b0e756d11418b85d.png" alt="front-res-10-not-support-bank"></p>
+<h4 id="“换【信用卡】”"><a href="#“换【信用卡】”" class="headerlink" title="“换【信用卡】”"></a>“换【信用卡】”</h4><p>换信用卡：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/db3067f12a484765e1e9372be6bfd8d7.png" alt="front-res-11-change-credit-card"></p>
+<h4 id="“换【储蓄卡】”"><a href="#“换【储蓄卡】”" class="headerlink" title="“换【储蓄卡】”"></a>“换【储蓄卡】”</h4><p>换储蓄卡，反正对方为了达到目的，会反复榨干你的每一处积蓄，比大多数服务业都贴心……</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d35775e7c994ce1cc0048f73acc7204d.png" alt="front-res-12-change-debit-card"></p>
+<h4 id="“有效期和后三位-错误”"><a href="#“有效期和后三位-错误”" class="headerlink" title="“有效期和后三位/错误”"></a>“有效期和后三位/错误”</h4><p>然后这个是信用卡相关的信息，和密码一样重要，也要注意不要轻易透露出去：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8f9e6256425b7fcac00fe1e7cca1e653.png" alt="front-res-13-change-valid-date-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0d8c986622de04ca55e7f0e8d200ffd8.png" alt="front-res-13-change-valid-date-2"></p>
+<h4 id="“【建设银行】-获取授权码”"><a href="#“【建设银行】-获取授权码”" class="headerlink" title="“【建设银行】==获取授权码”"></a>“【建设银行】==获取授权码”</h4><p>使用建设银行应该是需要额外的授权码，骗子也会想办法搞到手：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/652d271bdda2f34a3a1cba0afd1f32d8.png" alt="front-res-14-ccb-auth-code-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0a3b50bb0a80c3b48cb46035f8975b22.png" alt="front-res-14-ccb-auth-code-2"></p>
+<h4 id="“【网银密码】”"><a href="#“【网银密码】”" class="headerlink" title="“【网银密码】”"></a>“【网银密码】”</h4><p>如果存在网银，也会骗取登录密码进行远程套现：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4c703e61b4c6792f672eef7024e9afb6.png" alt="front-res-15-input-ebank-passwd-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a5565b24c4e3cd0cd37454fc3e23cd3c.png" alt="front-res-15-input-ebank-passwd-2"></p>
+<h4 id="“请保持银行卡内余额大于5000验证”"><a href="#“请保持银行卡内余额大于5000验证”" class="headerlink" title="“请保持银行卡内余额大于5000验证”"></a>“请保持银行卡内余额大于5000验证”</h4><p>下面的就有意思了，如果骗子觉得你卡内金额太少（穷），就会提示你再多搞点过来：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cc4c260b50b9d06fca93957062d40925.png" alt="front-res-16-need-account-5000"></p>
+<h4 id="“请保持银行卡内余额大于10000验证”"><a href="#“请保持银行卡内余额大于10000验证”" class="headerlink" title="“请保持银行卡内余额大于10000验证”"></a>“请保持银行卡内余额大于10000验证”</h4><p>或者骗子心情好，来个狮子大开口：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8b5c784332ba5e3ac5f6724e1351d1e5.png" alt="front-res-17-need-account-10000"></p>
+<h4 id="“验证码超时失效，请返回重新获取（显示余额）”"><a href="#“验证码超时失效，请返回重新获取（显示余额）”" class="headerlink" title="“验证码超时失效，请返回重新获取（显示余额）”"></a>“验证码超时失效，请返回重新获取（显示余额）”</h4><p>然后这是验证码超时提示金额，和之前差不多：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0d4b6b835706b0b6c4929f86bbf39ca4.png" alt="front-res-18-msg-timeout-show-amount-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/85e284ef7d1a546abca2bce79cbd751f.png" alt="front-res-18-msg-timeout-show-amount-2"></p>
+<h4 id="“只支持工、平、浦、招、光储蓄卡”"><a href="#“只支持工、平、浦、招、光储蓄卡”" class="headerlink" title="“只支持工、平、浦、招、光储蓄卡”"></a>“只支持工、平、浦、招、光储蓄卡”</h4><p>这里本来应该是提示支持指定银行，不过……看来天下开发者总是有不同的环境，类似的处境，唉，同情那位仁兄3秒：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4732597d584865971124561f0c5675f3.png" alt="front-res-19-only-support-some-banks"></p>
+<h4 id="“下载-apk-拦截马”"><a href="#“下载-apk-拦截马”" class="headerlink" title="“下载 apk 拦截马”"></a>“下载 apk 拦截马”</h4><p>这里也一样，本来该骗用户下载安卓木马的，但似乎也还没准备好：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/97201804b14a81921335c93a403eebec.png" alt="front-res-20-download-apk-trojan-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bea6a15e95cd6868135ad8a2b48691d4.png" alt="front-res-20-download-apk-trojan-2"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/cf95e17fdb5d6ecc154f03bef8eecc74.png" alt="front-res-20-download-apk-trojan-3"></p>
+<h4 id="“联系在线客服”"><a href="#“联系在线客服”" class="headerlink" title="“联系在线客服”"></a>“联系在线客服”</h4><p>一样：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de5a92cf27f20b78ad4d32f54f9686ee.png" alt="front-res-21-contact-online-service"></p>
+<h4 id="“信息不一致，请返回从新填写正确的预留信息”"><a href="#“信息不一致，请返回从新填写正确的预留信息”" class="headerlink" title="“信息不一致，请返回从新填写正确的预留信息”"></a>“信息不一致，请返回从新填写正确的预留信息”</h4><p>察觉用户输入信息不一致，重新填写：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2e476cb247aa61b42922aad75dcbb3a9.png" alt="front-res-22-info-inconsistent"></p>
+<h4 id="“扣款–打枪”"><a href="#“扣款–打枪”" class="headerlink" title="“扣款–打枪”"></a>“扣款–打枪”</h4><p>这里也有意思，基本就是骗子已经从用户手上套现了，为了安抚民心，整这一大段话提示用户这是流程的基本操作，以及后续会返还之类的（信你个gui）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/761aa09a90ce5747ad3ef28c170e5d09.png" alt="front-res-23-stole-money-1"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/aafb5db1dbff49e1891b249f8d25e58a.png" alt="front-res-23-stole-money-2"></p>
+<h4 id="“【先回复打字，再设置此功能键】”"><a href="#“【先回复打字，再设置此功能键】”" class="headerlink" title="“【先回复打字，再设置此功能键】”"></a>“【先回复打字，再设置此功能键】”</h4><p>然后这是最后一项了，大致就是骗子自己编话术，然后返回提示用户：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ff7623fcbfd9d69aea5747f1fe30a3de.png" alt="front-res-24-self-define-reply-backend"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f4b8fedfd6d6b90e7e4357484a21ab23.png" alt="front-res-24-self-define-reply"></p>
+<h2 id="0x05-结语"><a href="#0x05-结语" class="headerlink" title="0x05 结语"></a>0x05 结语</h2><p>正道的光可以迟到，但不能缺席，由于目前所收集的诈骗团伙相关信息还并不充分，后续会想办法陆陆续续收集，再交由警方处理<br><img src="https://img-blog.csdnimg.cn/img_convert/c986e76962610c5d42e6e7c7df0a0c1f.png" alt="zhapian-jubao-online"></p>
+<p>最后呢，其实也并没有什么额外要说的，因为防骗或安全意识这些大道理，国家政府再到媒体个人，每天都在强调，稍微留心一下就行了，从这整个过程看来（攻克过程不重要，可以忽略），贬义的讲，骗子考虑业务场景还挺周到的，也有不少地方在利用人的弱点，就比如之前图中那些接近官方的环境和话语，大家还是得注意分辨；</p>
+<p>然后就是最最重要的，因为那封邮件是一切的开端，注意提高账户密保和安全性是一方面，比如加个登录二次验证什么的，另一方面就是不要轻信任何信息，涉及链接或二维码这些的，即使来自身边熟悉的人，因为他们可能也只是受害者链上的一个节点而已。</p>
+<p><img src="https://img-blog.csdnimg.cn/99bc130c6497435fb14f3a2a06724125.jpg" alt="country-fanzha"></p>
+<p>另外，额外宣传一波 (¬‿¬)，国家出台的反诈中心APP，除了风险检测与线上举报外，更有相当多的真实案例公布更新，可下载备用。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">kukuqi666</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://kukuqi666.github.io/2024/09/27/qi-ta/ji-yi-ci-na-xia-wang-luo-zha-pian-zhe-zhan-dian-quan-guo-cheng-yu-tao-lu-fen-xi/">https://kukuqi666.github.io/2024/09/27/qi-ta/ji-yi-ci-na-xia-wang-luo-zha-pian-zhe-zhan-dian-quan-guo-cheng-yu-tao-lu-fen-xi/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">kukuqi666</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/exploit-hack-%E6%B8%97%E9%80%8F-%E5%AE%89%E5%85%A8-%E8%AF%88%E9%AA%97/">
+                                    <span class="chip bg-color">exploit hack 渗透 安全 诈骗</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz',
+        appKey: 'itmzT1JbXfAjVwMqDhGPzU45',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/09/27/qi-ta/xiao-cheng-xu-dai-ma/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="微信小程序">
+                        
+                        <span class="card-title">微信小程序</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            微信小程序-github实例代码
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Exploit/" class="post-category">
+                                    Exploit
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/exploit-%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">exploit 小程序</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/09/27/qi-ta/tong-guo-python-zhi-zuo-wang-ye-cha-xun-excel-shu-ju/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="通过Python制作网页查询Excel数据">
+                        
+                        <span class="card-title">通过Python制作网页查询Excel数据</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            通过Python制作网页查询Excel数据 实现简易网页可视化查询
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Exploit/" class="post-category">
+                                    Exploit
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/exploit-python-%E7%BC%96%E7%A8%8B-%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">exploit python 编程 后端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 如梦初醒<br />'
+            + '文章作者: kukuqi666<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2024</span>
+            
+            <span id="year">2018</span>
+            <a href="/about" target="_blank">kukuqi666</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">166.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "09";
+                    var startDate = "20";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/kukuqi666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:kukuqi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100083476812104" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://x.com/wnfng521" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+    <a href="https://t.me/kukuqi666" class="tooltipped" target="_blank" data-tooltip="关注我的telegram" data-position="top" data-delay="50">
+        <i class="fab fa-telegram"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var searchFunc = function (path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function (xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function () {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function () {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function (data) {
+                            var isMatch = true;
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title !== '' && data_content !== '') {
+                                keywords.forEach(function (keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i === 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start === 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substr(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function (keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                    });
+
+                                    str += "<p class=\"search-result\">" + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        };
+
+        searchFunc('/search.xml', 'searchInput', 'searchResult');
+    });
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

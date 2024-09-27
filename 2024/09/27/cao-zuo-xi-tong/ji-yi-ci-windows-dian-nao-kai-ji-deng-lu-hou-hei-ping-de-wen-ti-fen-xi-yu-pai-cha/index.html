@@ -1,0 +1,1602 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="记一次Windows电脑开机登录后黑屏的问题分析与排查, 如梦初醒, kukuqi666">
+    <meta name="description" content="从来没有真正的绝境，只有心灵的迷途">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>记一次Windows电脑开机登录后黑屏的问题分析与排查 | 如梦初醒</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="如梦初醒" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">如梦初醒</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">如梦初醒</div>
+        <div class="logo-desc">
+            
+            从来没有真正的绝境，只有心灵的迷途
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/kukuqi666/kukuqi666.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Home page
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/kukuqi666/kukuqi666.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Home page" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">记一次Windows电脑开机登录后黑屏的问题分析与排查</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/windows-%E7%99%BB%E5%BD%95-%E9%BB%91%E5%B1%8F-%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B-%E6%97%A5%E5%BF%97/">
+                                <span class="chip bg-color">windows 登录 黑屏 事件查看 日志</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-09-27
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    0
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        <!-- 代码块折行 -->
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <!--
+# 起因
+
+一阳光明媚的晌午，本人心情愉悦地摁下了笔记本的开机键后，略过了主板开机动画，熬过了 Windows 登录（win10 系统）的魔力转圈圈，最终却没能等来那昔日熟悉的桌面与亲切的图标们，直接映入眼帘的是下图：
+
+![black.png](https://i.loli.net/2020/05/19/8YkgFhcs3IzlSKb.png)
+
+嗯，就这样盯着它，10s...30s...1min...时间安静的流淌，内心也慢慢掀起了波澜，身经百战的心灵意识到不好的事情要发生了；Nice，人在家中坐，bug 天上来，不过黑屏给了我黑色的眼，我将用它来寻找问题。
+
+# 问题探索
+
+首先，调整好心态，冷静就有希望，慌乱就会败北（或者是像本人一样曾被无数 bug 折磨后的生死看淡？）问题总有会一些办法可以进行解决；然后就是寻找突破口了，这时下意识的晃了晃鼠标，然后熟悉的小光标出现了！但是还是背景一片黑，不过在这无边的黑暗中，这光标也算闪烁着唯一又弱小的希望的光芒；然后又是试探性的按了一下键盘的 `windows` 键，然后画风一变：
+
+![black-win-a.png](https://i.loli.net/2020/05/19/YzheBOKMX6roZLx.png)
+
+按 `win+a`也有反应，打开了侧边栏，证明系统已经加载完毕，按键都有作用，只是无法显示，于是一顿操作打开了个应用（盲开），等待数秒后没有反应，仍是一片黑，再次按下 win 键又确实看见了它已被打开，鼠标挪到任务栏位置看一下：
+
+![black-mouse-to-taskbar-window.png](https://i.loli.net/2020/05/19/qj9izT2xd8XSLJa.png)
+
+再开个应用，尝试使用 `alt+tab` 组合键切换应用：
+
+![black-switch-window.png](https://i.loli.net/2020/05/19/PdB8bTaRM3L4IDf.png)
+
+看来能够正常启动应用，然后尝试点开了任务栏一个应用（资源管理器），把鼠标挪到应用的任务栏缩略图后，出现了下面一幕：
+
+![black-mouse-to-taskbar-window.png](https://i.loli.net/2020/05/19/qj9izT2xd8XSLJa.png)
+
+咦这不是我那亲切的桌面嘛，居然以这种方式出现了，果然有戏，接下来再进一步发掘；**然而** 就在这时，桌面奇迹般的亮了，一切恢复如初，就像风不曾吹过，雨不曾下过，似一切都未曾发生过，难道是这般执著感化了 CPU ？开个玩笑，刚才没有执行特使的操作，应该是某种超时时间过了，桌面出现响应，不过看了看时间，算一下时间差大概有 3 分钟左右，果然这就是神奇的相对论，转瞬的时间有时可以变得很漫长；
+
+不过事情不会这样结束，接下来又是习惯性地重启了电脑，看一下问题是否会再现，一顿操作和等待后，电脑开机...登录...转圈圈...然后果然又是黑屏！无边的黑暗再次席卷覆盖整个显示屏，不过这一次就要想办法将其撕破了；
+
+# 问题分析
+
+根据前面的经历，这里黑屏应该也要持续 3 分钟左右，甚至更多，那么就不能干等着，于是开始盯着深邃的屏幕陷入沉思：问题出在 Windows 系统登录后（该系统设置了开机自动登录 Windows 账户），就是系统的 BOOT 引导已经结束，这样就排除了常见的开机黑屏现象，即按下 电源键后一直黑没多余反应那种，这就通常是硬件方面的问题，比如内存条接触不良等原因，目前就基本排除了这些原因；既然是系统启动后，并且执行完了登录操作，而没能正常显示桌面，那么问题就缩小（好像也不怎么小哈..）到了软件层面，比如系统服务，驱动，启动项等等；
+
+等等，启动项和桌面，好像想到了什么，因为一直在用一款桌面整理软件，从而避免脏乱差的视觉环境，同时就是设置开机启动，最近软件也更新了一下，难道是这个原因造成的桌面显示 bug ？不知不觉间桌面已经恢复显示了，于是按下 `Ctrl+Shift+Esc` 组合键调出任务管理器，点下 **启动** 栏，然后禁用该程序开机启动：
+
+![taskmgr-startup-disable.png](https://i.loli.net/2020/05/19/C6zbQEwVGThtvKM.png)
+
+随后马不停蹄地重启了电脑，然后，事实证明事情似乎没有想象中的简单，依然是熟悉的黑屏，到这里也没有特别的好招了，因为一般给别人解决问题时首先就是问最近干了啥，可能会发现线索，不过本人最近用计算机干的事情似乎有点多，系统到用户层面的各种，服务器、虚拟机、数据库等等，一时也想不出什么线索（甚至觉得盯着屏幕呼吸都是一种错 -_-），所以准备向搜索引擎寻求帮助或者找找启发；
+
+# 问题排查
+
+## 搜索解决方案
+
+一搜还确实有不少小伙伴有类似的经历，排除硬件故障无法开机的，有说更新驱动的，还不少，这种回答就一笑略过吧，这种方案很普遍也是有原因的，排除不愿相信硬件损坏的显示，就可以把大部分问题推到在软硬件之间打交道的驱动程序上了，其在过去确实能解决大部分问题，不过各厂商也都更新了这么多年了，驱动层面的问题现在应该很少了，而且本人电脑里的各个驱动都一直保持在最新状态，这个也排除了；
+
+另外也有提到取消 Windows 的快速启动功能的，也就是下面的步骤：
+
+![control-powercfg.png](https://i.loli.net/2020/05/19/Lk31UDeJMZuKlm5.png)
+
+![control-power-unlock.png](https://i.loli.net/2020/05/19/mi1H5A9jhswLk6Z.png)
+
+![control-power-uncheck.png](https://i.loli.net/2020/05/19/B18AiCrYSo9Elyn.png)
+
+不过经测试无效，所以排除；
+
+继续浏览，不出所料，处理和解决 Windows 大部分故障或问题的场景，几乎都能见到 **注册表** 的身影，不过确实注册表这东西和 Windows 系统关系相当紧密，你在 Windows 中执行的大部分可见甚至不可见的操作，几乎都一项注册表项值与之关联；关于注册表的解决方案中基本都提到修改同一个地方（大部分是让下载或者新建一个注册表文件，然后双击导入系统，其实大可不必这样复杂）：
+
+<pre class="line-numbers language-none"><code class="language-none">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\&#123;4d36e968-e325-11ce-bfc1-08002be10318&#125;\0000
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\&#123;4d36e968-e325-11ce-bfc1-08002be10318&#125;\0001<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>即在这两项下都增加（不存在的话）一个名为 <code>EnableULPS</code> 的键，值为 <code>0</code>，类型为 <code>REG_DWORD</code>，就是如下图这样：</p>
+<p><img src="https://i.loli.net/2020/05/19/CQ7hOsKvznlIdHa.png" alt="regedit-enableULPS.png"></p>
+<p>不明觉厉，先重启试试……还真<strong>解决</strong>了！！但是由于职业精神，问题被莫名其妙的解决了还是有些不甘心，于是就继续深入分析下，上面的注册表操作其实就是把 <code>EnableULPS</code> 这个熟悉赋值为了 <code>0</code>，根据字面意思全部翻译过来就是禁用了 <strong><code>ULPS</code></strong> 这个功能，再搜索得知，其全称 <code>Ultra Low Power State（超低功率状态）</code>，这个似乎是 AMD 中的一个功能，下面是引用片段：</p>
+<blockquote>
+<p> AMD 显卡为了防止因为频率太高导致系统不稳定。所以在 AMD 显卡上推出了一个 ULPS 功能，就是用户无操作的时候自动降频，休眠，然后用于节电。想法是好的，但是有人用了导致黑屏。所以出了一个关闭此功能的工具，它可以用于检测这个功能的开关状态，并直接关掉。</p>
+</blockquote>
+<p>不过这个问题能在我的 Intel 中出现也是很迷；另外文章还有提到：</p>
+<blockquote>
+<ul>
+<li>ULPS是休眠状态 ，降低非主卡的频率和电压的以节省电能，缺点就是可能会导致性能的损失和一些交火不稳定。</li>
+<li>经常用电池的不建议关闭ULPS，因为关闭后显卡一直工作在独显状态。</li>
+</ul>
+</blockquote>
+<p>细想以前似乎从未动过这个功能，这么冒然改好像有点简单粗暴，之后还可能会得不偿失，所以这个方案暂时存着，先找找其它方面的问题；</p>
+<h2 id="自行排查"><a href="#自行排查" class="headerlink" title="自行排查"></a>自行排查</h2><h3 id="系统服务"><a href="#系统服务" class="headerlink" title="系统服务"></a>系统服务</h3><p>就像之前说的，搜索问题有时候并不能得到有效的解决方案，但是某些回复的解决手段或者思路是可以起到一定程度的启发作用的，比如某一条大致说的是排查系统服务的问题，确实，之前分析时把问题定位在系统层面，排查过了启动项，但是 <strong>服务</strong> 这一块还没测试，所以先打开 <code>msconfig</code>，<code>Win+R</code> 后输入：</p>
+<p><img src="https://i.loli.net/2020/05/20/yec8OnPfowgRaqF.png" alt="msconfig-open.png"></p>
+<p>然后进入服务模块：</p>
+<p><img src="https://i.loli.net/2020/05/20/KgP5yZrG4AYoabQ.png" alt="msconfig-service.png"></p>
+<p>这里列出的就是系统中的所有服务项，前面打勾代表已启用，否则是禁用，这里的思路就是先都禁用了，然后重启如果正常则挨个启用排查是哪一项服务的问题，当然这样工作量有点大，全部禁用也可能会出现额外的问题，所以可以先试试系统自带的诊断启动，会加载一些基本服务和设备，就是点击上图顶部最左侧的 <strong>常规</strong> 模块，然后选择 <strong>诊断启动</strong>：</p>
+<p><img src="https://i.loli.net/2020/05/20/L3IlZ2dJMxRBubN.png" alt="msconfig-diagnose-boot.png"></p>
+<p>点确定或应用后重启系统，这次就愉快又快速的进入系统桌面了（证明禁用不必要的服务确实能提高开机速度），不过也会发现某些模块无法使用，比如喇叭和屏幕亮度，甚至提示某些系统错误，很正常，因为只启用了基本服务，其它的系统服务和模块就没有加载，不过不影响问题排查就行了；</p>
+<h3 id="系统日志"><a href="#系统日志" class="headerlink" title="系统日志"></a>系统日志</h3><p>当然，排查问题怎么少的了日志分析，可以起到一定辅助作用，于是这时就想起了 Windows 自家的法宝 <strong>事件查看器</strong>（由于平时也基本也怎么用过），平时用惯了 Linux 命令行分析日志，突然一切可视化了还不太习惯，先打开熟悉一下操作再说：</p>
+<p><img src="https://i.loli.net/2020/05/20/rckZ8LMRA7YO6t9.png" alt="event-win-search.png"></p>
+<p>点开 Windows 日志：</p>
+<p><img src="https://i.loli.net/2020/05/20/VNi7eWsDgdE84GA.png" alt="eventlog-windows-log.png"></p>
+<p>再看看包含事件的几项：</p>
+<p><img src="https://i.loli.net/2020/05/20/lYFzVDdJ62CHBvj.png" alt="eventlog-app.png"></p>
+<p><img src="https://i.loli.net/2020/05/20/KWTXPaz51S7picD.png" alt="eventlog-security.png"></p>
+<p>这里由于分析问题可能是出在系统层面上，所以先关注 Windows 相关的事件，应用程序的暂且不管（其实也是因为点开它后发现应用数量有些庞大，不好找落脚点 ╮(╯▽╰)╭<br>），然后就是挨个进到每一项中，点击右侧操作栏的<strong>清除日志</strong>按钮把日志分别清空：</p>
+<p><img src="https://i.loli.net/2020/05/20/e2TqM3rIoicgZRx.png" alt="eventlog-clear.png"></p>
+<p>这样如果后续操作时问题复现了，就可以较精确的定位了；</p>
+<h3 id="服务排查"><a href="#服务排查" class="headerlink" title="服务排查"></a>服务排查</h3><p>然后可以把事件查看器关闭，再次打开 <code>msconfig</code>，选择诊断启动，再切到服务模块，可以看到大部分服务都没有被勾选了，然后我们点一下“服务”这个表头，让项目按名称顺序排列，方便后续操作：</p>
+<p><img src="https://i.loli.net/2020/05/20/HZ8UNyD95i6QRor.png" alt="msconfig-sort-by-name.png"></p>
+<p>然后就是重点的排除环节了，这里大致数了一下，有 400 个左右的服务项，如果挨个勾选再重启检查的话，可能也就写不出这篇文章了，所以需要找一个高效的办法，之前搜索问题时也受到一位小伙伴的启发，可以使用 <strong>二分查找</strong> 法进行排除，这本来是算法中的一种解决方案，没想到被这样给实际应用了(～￣▽￣)～，这里通俗讲就是先勾选一半的服务项目，比如从第一条开始，一直勾选直到右侧滚动条运动到大概中点的位置（好像工作量也不小，看手速咯），前面已经对服务名称进行过排序，所以这里前半部分服务大致是字母开头是 <code>A - P</code> 的服务项：</p>
+<p><img src="https://i.loli.net/2020/05/20/NxIhDsUypc31LbE.png" alt="msconfig-check-a-p.png"></p>
+<p>重启系统后正常进入桌面，证明问题不在勾选的前半部分服务项中，可以排除掉，接下来我们再把剩下的没有勾选的服务项，勾选它们的前半部分，也就是说现在还有总量的最后四分之一部分没有被勾选，这样排除确实挺快，然后就是清除全部 Windows 日志，重启，再重复这些工作，直到问题复现（登录黑屏）；</p>
+<p>于是乎在进行到 <code>W</code> 字母开头的服务项排查时，登录终于黑屏了，虽然有些幸灾乐祸，但是却代表定位到问题了；然后就是继续二分，缩小范围，最终定位如下图所示：</p>
+<p><img src="https://i.loli.net/2020/05/20/mZPgpqOarJB6sWu.png" alt="msconfig-uncheck-web-account.png"></p>
+<p>也就是说罪魁祸首是这个名为“web 账户管理器”的服务项，看制造商应该是一项系统服务，并且之前搜索时看到有几位小伙伴定位的服务项是“App Readiness”，所以这个会因不同系统环境而不同，不应该一概而论冒然禁用；当然把它禁用后问题就<strong>解决</strong>了，没有像之前一样修改注册表，但是再次本着职业精神（no zuo no die），就继续分析一下问题的具体原因；</p>
+<h3 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h3><h4 id="日志概览"><a href="#日志概览" class="headerlink" title="日志概览"></a>日志概览</h4><p>每一次统计的系统日志就在这时候发挥作用了，因为每一次重启前都清除了日志，所以每次记录的也就是当前排查项的事件，下面看一下记录的日志情况：</p>
+<p><img src="https://i.loli.net/2020/05/20/7qgA6YcxHBOaDLZ.png" alt="eventlog-app-apperr.png"></p>
+<p><img src="https://i.loli.net/2020/05/20/PJanBDdlA4kv5ZE.png" alt="black-sys-errlog.png"></p>
+<p>分别查看不同事件，可以 显示详细信息：</p>
+<p><img src="https://i.loli.net/2020/05/20/CoM5NGHnkl8tgTi.png" alt="black-sys-err-dhcp.png"></p>
+<p><img src="https://i.loli.net/2020/05/20/1tLIeDmEuXxSrbW.png" alt="black-sys-err-scm-ops.png"></p>
+<h4 id="日志筛选"><a href="#日志筛选" class="headerlink" title="日志筛选"></a>日志筛选</h4><p>可以看到即使单次记录的日志量也是很庞大的，所以现在可以使用事件查看器的<strong>日志筛选</strong>功能了，即点击右侧操作栏的<strong>筛选当前日志</strong>按钮，会弹出筛选设置窗口：</p>
+<p><img src="https://i.loli.net/2020/05/20/Whd6uxaFLikn57f.png" alt="eventlog-filter.png"></p>
+<p>首先是记录时间，即指定事件的起始和结束时间点，可以在开机和桌面显示后分别记录一个时间，然后选择这个时间区间就能进一步缩小范围；</p>
+<p><img src="https://i.loli.net/2020/05/20/DLo1dfYI8UyHezx.png" alt="eventlog-filter-time.png"></p>
+<p>然后是时间组别，浏览也会发现事件主要分为信息、警告和错误，这里我们只用关心<strong>错误</strong>类型的事件，勾上后下面的项目暂时不用关，点确定；</p>
+<p><img src="https://i.loli.net/2020/05/20/NkmrXzZR5lKGdpe.png" alt="eventlog-filter-config.png"></p>
+<p>下面就是筛选结果，可以看到错误信息还挺多，</p>
+<p><img src="https://i.loli.net/2020/05/20/vqGgIDwxbWpL6lT.png" alt="eventlog-filter-done.png"></p>
+<p>对比黑屏时产生的错误日志，可以发现“应用程序”项的错误在正常进入桌面时也有发生，所以可以暂时排除这一项，而“安全”这一项，都是信息类，并没有错误类事件，所以也排除，最后就只剩“系统”这一项中的错误日志存在差异，存在差异的事件包括名为 <code>Service Control Manager</code> 和 <code>DistributedCOM</code>  的事件“来源”中；</p>
+<p><img src="https://i.loli.net/2020/05/20/41OykxKat78FhLi.png" alt="eventlog-app-err-of-black.png"></p>
+<p><img src="https://i.loli.net/2020/05/20/1Lkr5Uwgcjodvl3.png" alt="eventlog-sys-err-of-black.png"></p>
+<h4 id="对比分析"><a href="#对比分析" class="headerlink" title="对比分析"></a>对比分析</h4><p>那么我们就来对比一下“系统”中产生的错误日志的差异，只是事件查看器似乎没有内置日志对比的功能，所以只能使用较为原始的办法，先选中想要分析的事件：</p>
+<p><img src="https://i.loli.net/2020/05/20/oBW3fsAN7KrJZO4.png" alt="eventlog-select-event.png"></p>
+<p>再点击右侧的<strong>保存选择的事件</strong>按钮，保存事件日志文件到任意位置：</p>
+<p><img src="https://i.loli.net/2020/05/20/7kif9mCnGgQD2NX.png" alt="eventlog-save-selected-log.png"></p>
+<p>像这样分别记录和保存发生黑屏问题和未发生问题时的事件，然后点击“打开保存的日志”，就能导入两个日志文件就行下一步分析了：</p>
+<p><img src="https://i.loli.net/2020/05/20/NzOyr49GwTdnQvg.png" alt="eventlog-open-saved-log.png"></p>
+<p>另外发现每个事件似乎都对应着一个唯一的 <strong>事件 ID</strong> 值，可以通过这个把两个日志文件重复的地方剔除，这就要使用筛选功能里的事件 ID 排除选项了：</p>
+<p><img src="https://i.loli.net/2020/05/20/e7Crcf4RqUGz6i1.jpg" alt="Inkedeventlog-filter-exclude-id.png"></p>
+<p>填入重复的事件 ID，用逗号隔开，前面加负号 <code>-</code> 表示排除该 ID 的事件，不加表示包括，筛选结果如下：</p>
+<p><img src="https://i.loli.net/2020/05/20/s4mTkPF37lWdDEL.png" alt="eventlog-filter-compare-result.png"></p>
+<p>两个错误事件相同，从下方信息栏中没有发现特别有用的信息，只有一行主要信息：</p>
+<pre class="line-numbers language-none"><code class="language-none">服务器 &#123;784E29F4-5EBE-4279-9948-1E8FE941646D&#125; 没有在要求的超时时间内向 DCOM 注册。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>那么接下来分析一下这串注册值，<code>Win+R</code> 输入 <code>wmic</code> 运行，进入 <strong>wmic</strong> 管理界面，然后运行：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">dcomapp where <span class="token string">"appid&lt;='&#123;79' and appid>='&#123;74'"</span> get appid,name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>以上命令是查询开头类似 <code>&#123;784E29F4-5EBE-4279-9948-1E8FE941646D&#125;</code> 的 DCOM 服务，得到结果如下：</p>
+<p><img src="https://i.loli.net/2020/05/20/3IOJitc1AXCrnRk.png" alt="wmic-dcomapp-query.png"></p>
+<p>浏览后发现里面没有和上面相同的 ID 值，所以这条线索断了，试试其它的；</p>
+<h4 id="进程追踪"><a href="#进程追踪" class="headerlink" title="进程追踪"></a>进程追踪</h4><p>点一下“详细信息”，再向下浏览，发现了触发该事件的进程信息，其中比较重要的就是进程 ID（ProcessID），也就是常说的 PID，这里为 <code>1140</code>，先记下来；</p>
+<p><img src="https://i.loli.net/2020/05/20/Ek7Or2Ui3MwvhNL.png" alt="eventlog-sys-compared-err-pid.png"></p>
+<p>然后 <code>Ctrl+Shift+Esc</code> 打开任务管理器，点一下 <strong>PID</strong> 栏（没有就在表头右键单击，然后勾选上），让它按数字升序排列，找到之前记录的 pid 值（1140）：</p>
+<p><img src="https://i.loli.net/2020/05/20/mCSs7kdBhu2xXOD.png" alt="eventlog-err-pid-with-tasklist.png"></p>
+<p>这时就能看到运行该进程的命令行信息了（同样要是没有这一列就右键点击勾选），发现运行的程序是 <code>C:\Windows\system32\svchost.exe</code>，这是一个系统程序，很多服务都会调用它，需要关注的是后面的参数，出现了 <code>RPCSS</code> 这个关键字，看着很熟悉，好像是和远程相关的，搜索后网上说这是一个与 <code>135</code> 端口相关的服务，那么我们就 <code>Win+R</code> 输入 <code>cmd</code> 打开命令提示符，查看一下这个端口信息：</p>
+<p><img src="https://i.loli.net/2020/05/20/a4Fj1Jzonr3c5fN.png" alt="cmd-netstat-rpcss.png"></p>
+<p>果然存在关联，那么这个 <code>RPCSS</code> 应该是一个服务，所以接下来用 <code>sc</code> 命令查询一下这个服务：</p>
+<p><img src="https://i.loli.net/2020/05/20/kPT8q6sgMxtSjwC.png" alt="cmd-sc-rpcss.png"></p>
+<p>确实是一个服务，这里主要是获取 <code>DISPLAY_NAME</code> 这个值，即 <code>Remote Procedure Call</code>，然后打开服务管理工具（<code>Win+R</code> 后输入 <code>services.msc</code>），找到这个服务项：</p>
+<p><img src="https://i.loli.net/2020/05/20/ZdMJRHNU1QyuG38.png" alt="service-rpcss.png"></p>
+<p>双击进去，看一下依赖关系，确实是一项系统基础服务，许多重要的服务和模块都依赖于它，还不能直接冒然禁用：</p>
+<p><img src="https://i.loli.net/2020/05/20/fgk4eRA3tKdjvZp.png" alt="service-rpcss-depend.png"></p>
+<p>到这里所有分析工作就结束了。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>下面是之后重新收集的黑屏时的错误事件（启用全部服务），这次就只剩一处错误日志了，也与上面分析筛选结果一致：</p>
+<p><img src="https://i.loli.net/2020/05/20/uTV34l8KHfGkJOc.png" alt="eventlog-in-black-less-err-warn.png"></p>
+<p>然而，当再次禁用之前的问题服务项时，信息量就剧增了：</p>
+<p><img src="https://i.loli.net/2020/05/20/qPZIgbeGtcEQnay.png" alt="eventlog-no-black-more-err-warn.png"></p>
+<p>原因也很明显，禁用一项比较关键的服务项，并且其依赖项还比较多时，就难免发生连环事故，虽然暂时解决了目前的问题，但是对于轻微强迫症的作者来说，多少看着还是有些不安（饮鸩止渴？）但是后面有趣的事情又发生了，在某一次启用全部服务（包括之前确定为问题源的“web 账户管理器”服务）重启进入系统后，竟然意外地<strong>没有黑屏</strong>，而是和平时一样正常进入桌面，后面又试了几次都正常……难道是这一天的 n 顿操作猛如虎和无数次重启再次感化 CPU？看来 Windows 系统永远是个谜，bug 轻轻走了又正如它轻轻的来，不带走一片云彩，算了不玩了，收工。<br>–&gt;</p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>一阳光明媚的晌午，本人心情愉悦地翻开笔记本，一如既往地摁下开机键后，略过了主板开机动画，熬过了 Windows 登录（win10 系统）的魔力转圈圈，最终却没能等来那昔日熟悉的桌面与亲切的图标们，直接映入眼帘的是下图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvOFlrZ0ZoY3MzSXpsU0tiLnBuZw?x-oss-process=image/format,png" alt="black.png"></p>
+<p>嗯，就这样盯着它，10s…30s…1min…时间安静的流淌，内心也慢慢掀起了波澜，身经百战的心灵意识到不好的事情要发生了；Nice，人在家中坐，bug 天上来，不过黑屏给了我黑色的眼，我将用它来寻找问题。</p>
+<h1 id="问题探索"><a href="#问题探索" class="headerlink" title="问题探索"></a>问题探索</h1><p>首先，调整好心态，冷静就有希望，慌乱就会败北（或者是像本人一样曾被无数 bug 折磨后的生死看淡？）问题总有会一些办法可以进行解决；然后就是寻找突破口了，这时下意识的晃了晃鼠标，然后熟悉的小光标出现了！但是还是背景一片黑，不过在这无边的黑暗中，这光标也算闪烁着唯一又弱小的希望的光芒；然后又是试探性的按了一下键盘的 <code>windows</code> 键，然后画风一变：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvWXpoZUJPS01YNnJvWkx4LnBuZw?x-oss-process=image/format,png" alt="black-win-a.png"></p>
+<p>按 <code>win+a</code>也有反应，打开了侧边栏，证明系统已经加载完毕，按键都有作用，只是无法显示，于是一顿操作打开了个应用（盲开），等待数秒后没有反应，仍是一片黑，再次按下 win 键又确实看见了它已被打开，鼠标挪到任务栏位置看一下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvcWo5aXpUMnhkOFhTTEphLnBuZw?x-oss-process=image/format,png" alt="black-mouse-to-taskbar-window.png"></p>
+<p>再开个应用，尝试使用 <code>alt+tab</code> 组合键切换应用：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvUGRCOGJUYVJNM0w0SURmLnBuZw?x-oss-process=image/format,png" alt="black-switch-window.png"></p>
+<p>看来能够正常启动应用，然后尝试点开了任务栏一个应用（资源管理器），把鼠标挪到应用的任务栏缩略图后，出现了下面一幕：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvcWo5aXpUMnhkOFhTTEphLnBuZw?x-oss-process=image/format,png" alt="black-mouse-to-taskbar-window.png"></p>
+<p>咦这不是我那亲切的桌面嘛，居然以这种方式出现了，果然有戏，接下来再进一步发掘；<strong>然而</strong> 就在这时，桌面奇迹般的亮了，一切恢复如初，就像风不曾吹过，雨不曾下过，似一切都未曾发生过，难道是这般执著感化了 CPU ？开个玩笑，刚才没有执行特使的操作，应该是某种超时时间过了，桌面出现响应，不过看了看时间，算一下时间差大概有 3 分钟左右，果然这就是神奇的相对论，转瞬的时间有时可以变得很漫长；</p>
+<p>不过事情不会这样结束，接下来又是习惯性地重启了电脑，看一下问题是否会再现，一顿操作和等待后，电脑开机…登录…转圈圈…然后果然又是黑屏！无边的黑暗再次席卷覆盖整个显示屏，不过这一次就要想办法将其撕破了；</p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>根据前面的经历，这里黑屏应该也要持续 3 分钟左右，甚至更多，那么就不能干等着，于是开始盯着深邃的屏幕陷入沉思：问题出在 Windows 系统登录后（该系统设置了开机自动登录 Windows 账户），就是系统的 BOOT 引导已经结束，这样就排除了常见的开机黑屏现象，即按下 电源键后一直黑没多余反应那种，这就通常是硬件方面的问题，比如内存条接触不良等原因，目前就基本排除了这些原因；既然是系统启动后，并且执行完了登录操作，而没能正常显示桌面，那么问题就缩小（好像也不怎么小哈..）到了软件层面，比如系统服务，驱动，启动项等等；</p>
+<p>等等，启动项和桌面，好像想到了什么，因为一直在用一款桌面整理软件，从而避免脏乱差的视觉环境，同时就是设置开机启动，最近软件也更新了一下，难道是这个原因造成的桌面显示 bug ？不知不觉间桌面已经恢复显示了，于是按下 <code>Ctrl+Shift+Esc</code> 组合键调出任务管理器，点下 <strong>启动</strong> 栏，然后禁用该程序开机启动：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvQzZ6YlFFd1ZHVGh0dktNLnBuZw?x-oss-process=image/format,png" alt="taskmgr-startup-disable.png"></p>
+<p>随后马不停蹄地重启了电脑，然后，事实证明事情似乎没有想象中的简单，依然是熟悉的黑屏，到这里也没有特别的好招了，因为一般给别人解决问题时首先就是问最近干了啥，可能会发现线索，不过本人最近用计算机干的事情似乎有点多，系统到用户层面的各种，服务器、虚拟机、数据库等等，一时也想不出什么线索（甚至觉得盯着屏幕呼吸都是一种错 -_-），所以准备向搜索引擎寻求帮助或者找找启发；</p>
+<h1 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h1><h2 id="搜索解决方案"><a href="#搜索解决方案" class="headerlink" title="搜索解决方案"></a>搜索解决方案</h2><p>一搜还确实有不少小伙伴有类似的经历，排除硬件故障无法开机的，有说更新驱动的，还不少，这种回答就一笑略过吧，这种方案很普遍也是有原因的，排除不愿相信硬件损坏的显示，就可以把大部分问题推到在软硬件之间打交道的驱动程序上了，其在过去确实能解决大部分问题，不过各厂商也都更新了这么多年了，驱动层面的问题现在应该很少了，而且本人电脑里的各个驱动都一直保持在最新状态，这个也排除了；</p>
+<p>另外也有提到取消 Windows 的快速启动功能的，也就是下面的步骤：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvTGszMVVEZUpNWnVLbG01LnBuZw?x-oss-process=image/format,png" alt="control-powercfg.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvbWkxSDVBOWpoc3dMazZaLnBuZw?x-oss-process=image/format,png" alt="control-power-unlock.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvQjE4QWlDcllTbzlFbHluLnBuZw?x-oss-process=image/format,png" alt="control-power-uncheck.png"></p>
+<p>不过经测试无效，所以排除；</p>
+<p>继续浏览，不出所料，处理和解决 Windows 大部分故障或问题的场景，几乎都能见到 <strong>注册表</strong> 的身影，不过确实注册表这东西和 Windows 系统关系相当紧密，你在 Windows 中执行的大部分可见甚至不可见的操作，几乎都一项注册表项值与之关联；关于注册表的解决方案中基本都提到修改同一个地方（大部分是让下载或者新建一个注册表文件，然后双击导入系统，其实大可不必这样复杂）：</p>
+<pre class="line-numbers language-none"><code class="language-none">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\&#123;4d36e968-e325-11ce-bfc1-08002be10318&#125;\0000
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\&#123;4d36e968-e325-11ce-bfc1-08002be10318&#125;\0001<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>即在这两项下都增加（不存在的话）一个名为 <code>EnableULPS</code> 的键，值为 <code>0</code>，类型为 <code>REG_DWORD</code>，就是如下图这样：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMTkvQ1E3aE9zS3Z6bmxJZEhhLnBuZw?x-oss-process=image/format,png" alt="regedit-enableULPS.png"></p>
+<p>不明觉厉，先重启试试……还真<strong>解决</strong>了！！但是由于职业精神，问题被莫名其妙的解决了还是有些不甘心，于是就继续深入分析下，上面的注册表操作其实就是把 <code>EnableULPS</code> 这个熟悉赋值为了 <code>0</code>，根据字面意思全部翻译过来就是禁用了 <code>ULPS</code> 这个功能，再搜索得知，其全称 <code>Ultra Low Power State（超低功率状态）</code>，这个似乎是 AMD 中的一个功能，下面是引用片段：</p>
+<blockquote>
+<p> AMD 显卡为了防止因为频率太高导致系统不稳定。所以在 AMD 显卡上推出了一个 ULPS 功能，就是用户无操作的时候自动降频，休眠，然后用于节电。想法是好的，但是有人用了导致黑屏。所以出了一个关闭此功能的工具，它可以用于检测这个功能的开关状态，并直接关掉。</p>
+</blockquote>
+<p>不过这个问题能在我的 Intel 中出现也是很迷；另外文章还有提到：</p>
+<blockquote>
+<ul>
+<li>ULPS是休眠状态 ，降低非主卡的频率和电压的以节省电能，缺点就是可能会导致性能的损失和一些交火不稳定。</li>
+<li>经常用电池的不建议关闭ULPS，因为关闭后显卡一直工作在独显状态。</li>
+</ul>
+</blockquote>
+<p>细想以前似乎从未动过这个功能，这么冒然改好像有点简单粗暴，之后还可能会得不偿失，所以这个方案暂时存着，先找找其它方面的问题；</p>
+<h2 id="自行排查-1"><a href="#自行排查-1" class="headerlink" title="自行排查"></a>自行排查</h2><h3 id="系统服务-1"><a href="#系统服务-1" class="headerlink" title="系统服务"></a>系统服务</h3><p>就像之前说的，搜索问题有时候并不能得到有效的解决方案，但是某些回复的解决手段或者思路是可以起到一定程度的启发作用的，比如某一条大致说的是排查系统服务的问题，确实，之前分析时把问题定位在系统层面，排查过了启动项，但是 <strong>服务</strong> 这一块还没测试，所以先打开 <code>msconfig</code>，<code>Win+R</code> 后输入：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAveWVjOE9uUGZvd2dSYXFGLnBuZw?x-oss-process=image/format,png" alt="msconfig-open.png"></p>
+<p>然后进入服务模块：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvS2dQNXlackc0QVlvYWJRLnBuZw?x-oss-process=image/format,png" alt="msconfig-service.png"></p>
+<p>这里列出的就是系统中的所有服务项，前面打勾代表已启用，否则是禁用，这里的思路就是先都禁用了，然后重启如果正常则挨个启用排查是哪一项服务的问题，当然这样工作量有点大，全部禁用也可能会出现额外的问题，所以可以先试试系统自带的诊断启动，会加载一些基本服务和设备，就是点击上图顶部最左侧的 <strong>常规</strong> 模块，然后选择 <strong>诊断启动</strong>：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvTDNJbFoyZEpNeFJCdWJOLnBuZw?x-oss-process=image/format,png" alt="msconfig-diagnose-boot.png"></p>
+<p>点确定或应用后重启系统，这次就愉快又快速的进入系统桌面了（证明禁用不必要的服务确实能提高开机速度），不过也会发现某些模块无法使用，比如喇叭和屏幕亮度，甚至提示某些系统错误，很正常，因为只启用了基本服务，其它的系统服务和模块就没有加载，不过不影响问题排查就行了；</p>
+<h3 id="系统日志-1"><a href="#系统日志-1" class="headerlink" title="系统日志"></a>系统日志</h3><p>当然，排查问题怎么少的了日志分析，可以起到一定辅助作用，于是这时就想起了 Windows 自家的法宝 <strong>事件查看器</strong>（由于平时也基本也怎么用过），平时用惯了 Linux 命令行分析日志，突然一切可视化了还不太习惯，先打开熟悉一下操作再说：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvcmNrWjhMTVJBN1lPNnQ5LnBuZw?x-oss-process=image/format,png" alt="event-win-search.png"></p>
+<p>点开 Windows 日志：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvVk5pN2VXc0RnZEU4NEdBLnBuZw?x-oss-process=image/format,png" alt="eventlog-windows-log.png"></p>
+<p>再看看包含事件的几项：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvbFlGelZEZEo2MkNIQnZqLnBuZw?x-oss-process=image/format,png" alt="eventlog-app.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvS1dUWFBhejUxUzdwaWNELnBuZw?x-oss-process=image/format,png" alt="eventlog-security.png"></p>
+<p>这里由于分析问题可能是出在系统层面上，所以先关注 Windows 相关的事件，应用程序的暂且不管（其实也是因为点开它后发现应用数量有些庞大，不好找落脚点 ╮(╯▽╰)╭<br>），然后就是挨个进到每一项中，点击右侧操作栏的<strong>清除日志</strong>按钮把日志分别清空：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvZTJUcU0zcklvaWNnWlJ4LnBuZw?x-oss-process=image/format,png" alt="eventlog-clear.png"></p>
+<p>这样如果后续操作时问题复现了，就可以较精确的定位了；</p>
+<h3 id="服务排查-1"><a href="#服务排查-1" class="headerlink" title="服务排查"></a>服务排查</h3><p>然后可以把事件查看器关闭，再次打开 <code>msconfig</code>，选择诊断启动，再切到服务模块，可以看到大部分服务都没有被勾选了，然后我们点一下“服务”这个表头，让项目按名称顺序排列，方便后续操作：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvSFo4VU55RDk1aTZRUm9yLnBuZw?x-oss-process=image/format,png" alt="msconfig-sort-by-name.png"></p>
+<p>然后就是重点的排除环节了，这里大致数了一下，有 400 个左右的服务项，如果挨个勾选再重启检查的话，可能也就写不出这篇文章了，所以需要找一个高效的办法，之前搜索问题时也受到一位小伙伴的启发，可以使用 <strong>二分查找</strong> 法进行排除，这本来是算法中的一种解决方案，没想到被这样给实际应用了(～￣▽￣)～，这里通俗讲就是先勾选一半的服务项目，比如从第一条开始，一直勾选直到右侧滚动条运动到大概中点的位置（好像工作量也不小，看手速咯），前面已经对服务名称进行过排序，所以这里前半部分服务大致是字母开头是 <code>A - P</code> 的服务项：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvTnhJaERzVXlwYzMxTGJFLnBuZw?x-oss-process=image/format,png" alt="msconfig-check-a-p.png"></p>
+<p>重启系统后正常进入桌面，证明问题不在勾选的前半部分服务项中，可以排除掉，接下来我们再把剩下的没有勾选的服务项，勾选它们的前半部分，也就是说现在还有总量的最后四分之一部分没有被勾选，这样排除确实挺快，然后就是清除全部 Windows 日志，重启，再重复这些工作，直到问题复现（登录黑屏）；</p>
+<p>于是乎在进行到 <code>W</code> 字母开头的服务项排查时，登录终于黑屏了，虽然有些幸灾乐祸，但是却代表定位到问题了；然后就是继续二分，缩小范围，最终定位如下图所示：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvbVpQZ3BxT2FySkI2c1d1LnBuZw?x-oss-process=image/format,png" alt="msconfig-uncheck-web-account.png"></p>
+<p>也就是说罪魁祸首是这个名为“web 账户管理器”的服务项，看制造商应该是一项系统服务，并且之前搜索时看到有几位小伙伴定位的服务项是“App Readiness”，所以这个会因不同系统环境而不同，不应该一概而论冒然禁用；当然把它禁用后问题就<strong>解决</strong>了，没有像之前一样修改注册表，但是再次本着职业精神（no zuo no die），就继续分析一下问题的具体原因；</p>
+<h3 id="日志分析-1"><a href="#日志分析-1" class="headerlink" title="日志分析"></a>日志分析</h3><h4 id="日志概览-1"><a href="#日志概览-1" class="headerlink" title="日志概览"></a>日志概览</h4><p>每一次统计的系统日志就在这时候发挥作用了，因为每一次重启前都清除了日志，所以每次记录的也就是当前排查项的事件，下面看一下记录的日志情况：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvN3FnQTZZY3hIQk9hRExaLnBuZw?x-oss-process=image/format,png" alt="eventlog-app-apperr.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvUEphbkJEZGxBNGt2NVpFLnBuZw?x-oss-process=image/format,png" alt="black-sys-errlog.png"></p>
+<p>分别查看不同事件，可以 显示详细信息：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvQ29NNU5HSG5rbDh0Z1RpLnBuZw?x-oss-process=image/format,png" alt="black-sys-err-dhcp.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvMXRMSWVEbUV1WHhTcmJXLnBuZw?x-oss-process=image/format,png" alt="black-sys-err-scm-ops.png"></p>
+<h4 id="日志筛选-1"><a href="#日志筛选-1" class="headerlink" title="日志筛选"></a>日志筛选</h4><p>可以看到即使单次记录的日志量也是很庞大的，所以现在可以使用事件查看器的<strong>日志筛选</strong>功能了，即点击右侧操作栏的<strong>筛选当前日志</strong>按钮，会弹出筛选设置窗口：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvV2hkNnV4YUZMaWtuNTdmLnBuZw?x-oss-process=image/format,png" alt="eventlog-filter.png"></p>
+<p>首先是记录时间，即指定事件的起始和结束时间点，可以在开机和桌面显示后分别记录一个时间，然后选择这个时间区间就能进一步缩小范围；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvRExvMWRmWUk4VXlIZXp4LnBuZw?x-oss-process=image/format,png" alt="eventlog-filter-time.png"></p>
+<p>然后是时间组别，浏览也会发现事件主要分为信息、警告和错误，这里我们只用关心<strong>错误</strong>类型的事件，勾上后下面的项目暂时不用关，点确定；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvTmttclh6WlI1bEtHZHBlLnBuZw?x-oss-process=image/format,png" alt="eventlog-filter-config.png"></p>
+<p>下面就是筛选结果，可以看到错误信息还挺多，</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvdnFHZ0lEd3hiV3BMNmxULnBuZw?x-oss-process=image/format,png" alt="eventlog-filter-done.png"></p>
+<p>对比黑屏时产生的错误日志，可以发现“应用程序”项的错误在正常进入桌面时也有发生，所以可以暂时排除这一项，而“安全”这一项，都是信息类，并没有错误类事件，所以也排除，最后就只剩“系统”这一项中的错误日志存在差异，存在差异的事件包括名为 <code>Service Control Manager</code> 和 <code>DistributedCOM</code>  的事件“来源”中；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvNDFPeWt4S2F0NzhGaExpLnBuZw?x-oss-process=image/format,png" alt="eventlog-app-err-of-black.png"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvMUxrcjVVd2djam9kdmwzLnBuZw?x-oss-process=image/format,png" alt="eventlog-sys-err-of-black.png"></p>
+<h4 id="对比分析-1"><a href="#对比分析-1" class="headerlink" title="对比分析"></a>对比分析</h4><p>那么我们就来对比一下“系统”中产生的错误日志的差异，只是事件查看器似乎没有内置日志对比的功能，所以只能使用较为原始的办法，先选中想要分析的事件：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvb0JXM2ZzQU43S3JKWk80LnBuZw?x-oss-process=image/format,png" alt="eventlog-select-event.png"></p>
+<p>再点击右侧的<strong>保存选择的事件</strong>按钮，保存事件日志文件到任意位置：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvN2tpZjltQ25HZ1FEMk5YLnBuZw?x-oss-process=image/format,png" alt="eventlog-save-selected-log.png"></p>
+<p>像这样分别记录和保存发生黑屏问题和未发生问题时的事件，然后点击“打开保存的日志”，就能导入两个日志文件就行下一步分析了：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvTnpPeXI0OUd3VGRuUXZnLnBuZw?x-oss-process=image/format,png" alt="eventlog-open-saved-log.png"></p>
+<p>另外发现每个事件似乎都对应着一个唯一的 <strong>事件 ID</strong> 值，可以通过这个把两个日志文件重复的地方剔除，这就要使用筛选功能里的事件 ID 排除选项了：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvZTdDcmNmNFJxVUd6NmkxLmpwZw?x-oss-process=image/format,png" alt="Inkedeventlog-filter-exclude-id.png"></p>
+<p>填入重复的事件 ID，用逗号隔开，前面加负号 <code>-</code> 表示排除该 ID 的事件，不加表示包括，筛选结果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvczRtVGtQRjM3bFdkREVMLnBuZw?x-oss-process=image/format,png" alt="eventlog-filter-compare-result.png"></p>
+<p>两个错误事件相同，从下方信息栏中没有发现特别有用的信息，只有一行主要信息：</p>
+<pre class="line-numbers language-none"><code class="language-none">服务器 &#123;784E29F4-5EBE-4279-9948-1E8FE941646D&#125; 没有在要求的超时时间内向 DCOM 注册。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>那么接下来分析一下这串注册值，<code>Win+R</code> 输入 <code>wmic</code> 运行，进入 <strong>wmic</strong> 管理界面，然后运行：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">dcomapp where <span class="token string">"appid&lt;='&#123;79' and appid>='&#123;74'"</span> get appid,name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>以上命令是查询开头类似 <code>&#123;784E29F4-5EBE-4279-9948-1E8FE941646D&#125;</code> 的 DCOM 服务，得到结果如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvM0lPSml0YzFBWENyblJrLnBuZw?x-oss-process=image/format,png" alt="wmic-dcomapp-query.png"></p>
+<p>浏览后发现里面没有和上面相同的 ID 值，所以这条线索断了，试试其它的；</p>
+<h4 id="进程追踪-1"><a href="#进程追踪-1" class="headerlink" title="进程追踪"></a>进程追踪</h4><p>点一下“详细信息”，再向下浏览，发现了触发该事件的进程信息，其中比较重要的就是进程 ID（ProcessID），也就是常说的 PID，这里为 <code>1140</code>，先记下来；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvRWs3T3IyVWkzTXd2aE5MLnBuZw?x-oss-process=image/format,png" alt="eventlog-sys-compared-err-pid.png"></p>
+<p>然后 <code>Ctrl+Shift+Esc</code> 打开任务管理器，点一下 <strong>PID</strong> 栏（没有就在表头右键单击，然后勾选上），让它按数字升序排列，找到之前记录的 pid 值（1140）：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvbUNTczdrZEJodTJ4WE9ELnBuZw?x-oss-process=image/format,png" alt="eventlog-err-pid-with-tasklist.png"></p>
+<p>这时就能看到运行该进程的命令行信息了（同样要是没有这一列就右键点击勾选），发现运行的程序是 <code>C:\Windows\system32\svchost.exe</code>，这是一个系统程序，很多服务都会调用它，需要关注的是后面的参数，出现了 <code>RPCSS</code> 这个关键字，看着很熟悉，好像是和远程相关的，搜索后网上说这是一个与 <code>135</code> 端口相关的服务，那么我们就 <code>Win+R</code> 输入 <code>cmd</code> 打开命令提示符，查看一下这个端口信息：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvYTRGajFKem9ucjNjNWZOLnBuZw?x-oss-process=image/format,png" alt="cmd-netstat-rpcss.png"></p>
+<p>果然存在关联，那么这个 <code>RPCSS</code> 应该是一个服务，所以接下来用 <code>sc</code> 命令查询一下这个服务：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAva1BUOHE2c2dNeHRTandDLnBuZw?x-oss-process=image/format,png" alt="cmd-sc-rpcss.png"></p>
+<p>确实是一个服务，这里主要是获取 <code>DISPLAY_NAME</code> 这个值，即 <code>Remote Procedure Call</code>，然后打开服务管理工具（<code>Win+R</code> 后输入 <code>services.msc</code>），找到这个服务项：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvWmRNSlJITlUxUXl1RzM4LnBuZw?x-oss-process=image/format,png" alt="service-rpcss.png"></p>
+<p>双击进去，看一下依赖关系，确实是一项系统基础服务，许多重要的服务和模块都依赖于它，还不能直接冒然禁用：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvZmdrNGVSQTN0S2RqdlpwLnBuZw?x-oss-process=image/format,png" alt="service-rpcss-depend.png"></p>
+<p>到这里所有分析工作就结束了。</p>
+<h1 id="后记-1"><a href="#后记-1" class="headerlink" title="后记"></a>后记</h1><p>下面是之后重新收集的黑屏时的错误事件（启用全部服务），这次就只剩一处错误日志了，也与上面分析筛选结果一致：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvdVRWMzRsOEtIZkdrSk9jLnBuZw?x-oss-process=image/format,png" alt="eventlog-in-black-less-err-warn.png"></p>
+<p>然而，当再次禁用之前的问题服务项时，信息量就剧增了：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMjAvMDUvMjAvcVBaSWdiZUd0Y0VRbmF5LnBuZw?x-oss-process=image/format,png" alt="eventlog-no-black-more-err-warn.png"></p>
+<p>原因也很明显，禁用一项比较关键的服务项，并且其依赖项还比较多时，就难免发生连环事故，虽然暂时解决了目前的问题，但是对于轻微强迫症的作者来说，多少看着还是有些不安（饮鸩止渴？）但是后面有趣的事情又发生了，在某一次启用全部服务（包括之前确定为问题源的“web 账户管理器”服务）重启进入系统后，竟然意外地<strong>没有黑屏</strong>，而是和平时一样正常进入桌面，后面又试了几次都正常……难道是这一天的 n 顿操作猛如虎和无数次重启再次感化 CPU？看来 Windows 系统永远是个谜，bug 轻轻走了又正如它轻轻的来，不带走一片云彩，算了不玩了，收工。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">kukuqi666</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ji-yi-ci-windows-dian-nao-kai-ji-deng-lu-hou-hei-ping-de-wen-ti-fen-xi-yu-pai-cha/">https://kukuqi666.github.io/2024/09/27/cao-zuo-xi-tong/ji-yi-ci-windows-dian-nao-kai-ji-deng-lu-hou-hei-ping-de-wen-ti-fen-xi-yu-pai-cha/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">kukuqi666</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/windows-%E7%99%BB%E5%BD%95-%E9%BB%91%E5%B1%8F-%E4%BA%8B%E4%BB%B6%E6%9F%A5%E7%9C%8B-%E6%97%A5%E5%BF%97/">
+                                    <span class="chip bg-color">windows 登录 黑屏 事件查看 日志</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz',
+        appKey: 'itmzT1JbXfAjVwMqDhGPzU45',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/09/27/bian-cheng/base64-ma-jian-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Base64 码简介">
+                        
+                        <span class="card-title">Base64 码简介</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Base64 码的介绍与使用
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/base64/">
+                        <span class="chip bg-color">base64</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/09/27/bian-cheng/markdown-wan-zheng-yu-fa-shuo-ming/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Markdown 完整语法说明">
+                        
+                        <span class="card-title">Markdown 完整语法说明</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            完整版markdown语法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 如梦初醒<br />'
+            + '文章作者: kukuqi666<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2024</span>
+            
+            <span id="year">2018</span>
+            <a href="/about" target="_blank">kukuqi666</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">166.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "09";
+                    var startDate = "20";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/kukuqi666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:kukuqi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100083476812104" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://x.com/wnfng521" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+    <a href="https://t.me/kukuqi666" class="tooltipped" target="_blank" data-tooltip="关注我的telegram" data-position="top" data-delay="50">
+        <i class="fab fa-telegram"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var searchFunc = function (path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function (xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function () {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function () {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function (data) {
+                            var isMatch = true;
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title !== '' && data_content !== '') {
+                                keywords.forEach(function (keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i === 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start === 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substr(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function (keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                    });
+
+                                    str += "<p class=\"search-result\">" + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        };
+
+        searchFunc('/search.xml', 'searchInput', 'searchResult');
+    });
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
